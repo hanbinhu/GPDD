@@ -1,0 +1,12 @@
+*Intergrator1
+
+R1 in tmp 10k
+C1 tmp out 10p
+Ex out 0 0 tmp 100
+RF tmp out 1Meg
+
+V1 in 0 1
+
+.ac out 0 DEC 1 100 1G
+
+.end

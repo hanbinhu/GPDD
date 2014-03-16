@@ -1,0 +1,11 @@
+*RLC Circuit
+
+R1 in mid 10k
+C1 mid out 1p
+L1 out 0 1n
+
+V1 in 0 1
+
+.ac out 0 DEC 1 100 100G
+
+.end

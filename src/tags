@@ -1,0 +1,616 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACInitial	Analysis.cpp	/^void Analysis::ACInitial(int type, int num, double start, double end) {$/;"	f	class:Analysis	signature:(int type, int num, double start, double end)
+ACInitial	Analysis.h	/^		void ACInitial(int type, int num, double start, double end);$/;"	p	class:Analysis	access:public	signature:(int type, int num, double start, double end)
+ACTYPE	Analysis.h	/^enum ACTYPE {LIN, DEC, OCT};$/;"	g
+ACTypeTranslate	Analysis.cpp	/^string Analysis::ACTypeTranslate(int type) const{$/;"	f	class:Analysis	signature:(int type) const
+ACTypeTranslate	Analysis.h	/^		string ACTypeTranslate(int type) const;$/;"	p	class:Analysis	access:private	signature:(int type) const
+ANALYSIS_H	Analysis.h	2;"	d
+Analysis	Analysis.cpp	/^Analysis::Analysis() {	$/;"	f	class:Analysis	signature:()
+Analysis	Analysis.h	/^		Analysis();$/;"	p	class:Analysis	access:public	signature:()
+Analysis	Analysis.h	/^		Analysis(const Analysis& other);$/;"	p	class:Analysis	access:public	signature:(const Analysis& other)
+Analysis	Analysis.h	/^class Analysis {$/;"	c
+Analysis::ACInitial	Analysis.cpp	/^void Analysis::ACInitial(int type, int num, double start, double end) {$/;"	f	class:Analysis	signature:(int type, int num, double start, double end)
+Analysis::ACInitial	Analysis.h	/^		void ACInitial(int type, int num, double start, double end);$/;"	p	class:Analysis	access:public	signature:(int type, int num, double start, double end)
+Analysis::ACTypeTranslate	Analysis.cpp	/^string Analysis::ACTypeTranslate(int type) const{$/;"	f	class:Analysis	signature:(int type) const
+Analysis::ACTypeTranslate	Analysis.h	/^		string ACTypeTranslate(int type) const;$/;"	p	class:Analysis	access:private	signature:(int type) const
+Analysis::Analysis	Analysis.cpp	/^Analysis::Analysis() {	$/;"	f	class:Analysis	signature:()
+Analysis::Analysis	Analysis.h	/^		Analysis();$/;"	p	class:Analysis	access:public	signature:()
+Analysis::Analysis	Analysis.h	/^		Analysis(const Analysis& other);$/;"	p	class:Analysis	access:public	signature:(const Analysis& other)
+Analysis::acType	Analysis.h	/^		int acType;$/;"	m	class:Analysis	access:private
+Analysis::allFreq	Analysis.h	/^		vector<double> allFreq;$/;"	m	class:Analysis	access:private
+Analysis::compareDouble	Analysis.cpp	/^bool Analysis::compareDouble(double a, double b) const {$/;"	f	class:Analysis	signature:(double a, double b) const
+Analysis::compareDouble	Analysis.h	/^		bool compareDouble(double a, double b) const;$/;"	p	class:Analysis	access:private	signature:(double a, double b) const
+Analysis::fend	Analysis.h	/^		double fend;$/;"	m	class:Analysis	access:private
+Analysis::fstart	Analysis.h	/^		double fstart;$/;"	m	class:Analysis	access:private
+Analysis::isSet	Analysis.h	/^		inline bool isSet() {return set;}$/;"	f	class:Analysis	access:public	signature:()
+Analysis::numStep	Analysis.h	/^		int numStep;$/;"	m	class:Analysis	access:private
+Analysis::outFile	Analysis.h	/^		inline string outFile() {return outFileName;}$/;"	f	class:Analysis	access:public	signature:()
+Analysis::outFileName	Analysis.h	/^		string outFileName;$/;"	m	class:Analysis	access:private
+Analysis::printACInf	Analysis.cpp	/^void Analysis::printACInf() const {$/;"	f	class:Analysis	signature:() const
+Analysis::printACInf	Analysis.h	/^		void printACInf() const;$/;"	p	class:Analysis	access:public	signature:() const
+Analysis::set	Analysis.h	/^		bool set;$/;"	m	class:Analysis	access:private
+Analysis::setOutFile	Analysis.cpp	/^void Analysis::setOutFile(const char* fname) {$/;"	f	class:Analysis	signature:(const char* fname)
+Analysis::setOutFile	Analysis.h	/^		void setOutFile(const char* fname);$/;"	p	class:Analysis	access:public	signature:(const char* fname)
+Analysis::sweep	Analysis.cpp	/^const vector<double>& Analysis::sweep() {$/;"	f	class:Analysis	signature:()
+Analysis::sweep	Analysis.h	/^		const vector<double>& sweep();$/;"	p	class:Analysis	access:public	signature:()
+Analysis::~Analysis	Analysis.h	/^		~Analysis() {}$/;"	f	class:Analysis	access:public	signature:()
+AnalysisPrint	GPDD.cpp	/^void GPDD::AnalysisPrint() const {$/;"	f	class:GPDD	signature:() const
+AnalysisPrint	GPDD.h	/^		void AnalysisPrint() const;$/;"	p	class:GPDD	access:public	signature:() const
+BISONSPAWN	Makefile	/^BISONSPAWN = position.hh stack.hh location.hh SpParser.hpp SpParser.cpp$/;"	m
+BKDRHash	HashGraph.cpp	/^unsigned int HashGraph::BKDRHash(const string s) {$/;"	f	class:HashGraph	signature:(const string s)
+BKDRHash	HashGraph.h	/^		unsigned int BKDRHash(const string s);$/;"	p	class:HashGraph	access:private	signature:(const string s)
+CC	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	e	enum:EdgeType
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g$/;"	m
+CKT_H	Ckt.h	2;"	d
+CS	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	e	enum:EdgeType
+Calculation	GPDD.cpp	/^void GPDD::Calculation() {$/;"	f	class:GPDD	signature:()
+Calculation	GPDD.h	/^		void Calculation();$/;"	p	class:GPDD	access:public	signature:()
+Ckt	Ckt.cpp	/^Ckt::Ckt() {$/;"	f	class:Ckt	signature:()
+Ckt	Ckt.cpp	/^Ckt::Ckt(const char* fname) {$/;"	f	class:Ckt	signature:(const char* fname)
+Ckt	Ckt.h	/^		Ckt();$/;"	p	class:Ckt	access:public	signature:()
+Ckt	Ckt.h	/^		Ckt(const char* fname);$/;"	p	class:Ckt	access:public	signature:(const char* fname)
+Ckt	Ckt.h	/^class Ckt {$/;"	c
+Ckt::Ckt	Ckt.cpp	/^Ckt::Ckt() {$/;"	f	class:Ckt	signature:()
+Ckt::Ckt	Ckt.cpp	/^Ckt::Ckt(const char* fname) {$/;"	f	class:Ckt	signature:(const char* fname)
+Ckt::Ckt	Ckt.h	/^		Ckt();$/;"	p	class:Ckt	access:public	signature:()
+Ckt::Ckt	Ckt.h	/^		Ckt(const char* fname);$/;"	p	class:Ckt	access:public	signature:(const char* fname)
+Ckt::anaAC	Ckt.h	/^		Analysis* anaAC;$/;"	m	class:Ckt	access:private
+Ckt::anaCkt	Ckt.h	/^		inline Analysis* anaCkt() const {return anaAC;}$/;"	f	class:Ckt	access:public	signature:() const
+Ckt::check_pair	Ckt.cpp	/^bool Ckt::check_pair() {$/;"	f	class:Ckt	signature:()
+Ckt::check_pair	Ckt.h	/^		bool check_pair();$/;"	p	class:Ckt	access:private	signature:()
+Ckt::eList	Ckt.h	/^		inline const list<cktEdge*> &eList() const {return edgeList;}$/;"	f	class:Ckt	access:public	signature:() const
+Ckt::edgeList	Ckt.h	/^		list<cktEdge*> edgeList;$/;"	m	class:Ckt	access:private
+Ckt::edgeTypeTranslate	Ckt.cpp	/^string Ckt::edgeTypeTranslate(int type) const {$/;"	f	class:Ckt	signature:(int type) const
+Ckt::edgeTypeTranslate	Ckt.h	/^		string edgeTypeTranslate(int type) const;$/;"	p	class:Ckt	access:private	signature:(int type) const
+Ckt::findCCEdge	Ckt.cpp	/^cktEdge* Ckt::findCCEdge(const char *eName) {$/;"	f	class:Ckt	signature:(const char *eName)
+Ckt::findCCEdge	Ckt.h	/^		cktEdge* findCCEdge(const char *eName);$/;"	p	class:Ckt	access:private	signature:(const char *eName)
+Ckt::findEdge	Ckt.cpp	/^cktEdge* Ckt::findEdge(const char *eName) {$/;"	f	class:Ckt	signature:(const char *eName)
+Ckt::findEdge	Ckt.h	/^		cktEdge* findEdge(const char *eName);$/;"	p	class:Ckt	access:private	signature:(const char *eName)
+Ckt::findVName	Ckt.cpp	/^cktEdge* Ckt::findVName(cktEdge* VEdge) {$/;"	f	class:Ckt	signature:(cktEdge* VEdge)
+Ckt::findVName	Ckt.h	/^		cktEdge* findVName(cktEdge* VEdge);$/;"	p	class:Ckt	access:private	signature:(cktEdge* VEdge)
+Ckt::insertNode	Ckt.cpp	/^cktNode* Ckt::insertNode(const char *nName) {$/;"	f	class:Ckt	signature:(const char *nName)
+Ckt::insertNode	Ckt.h	/^		cktNode* insertNode(const char *nName);$/;"	p	class:Ckt	access:private	signature:(const char *nName)
+Ckt::nodeList	Ckt.h	/^		list<cktNode*> nodeList;$/;"	m	class:Ckt	access:private
+Ckt::nodeTypeTranslate	Ckt.cpp	/^int Ckt::nodeTypeTranslate(cktNode* node) const {$/;"	f	class:Ckt	signature:(cktNode* node) const
+Ckt::nodeTypeTranslate	Ckt.h	/^		int nodeTypeTranslate(cktNode* node) const;$/;"	p	class:Ckt	access:private	signature:(cktNode* node) const
+Ckt::numE	Ckt.h	/^		inline int numE() const {return numEdge;}$/;"	f	class:Ckt	access:public	signature:() const
+Ckt::numEdge	Ckt.h	/^		int numEdge;$/;"	m	class:Ckt	access:private
+Ckt::numN	Ckt.h	/^		inline int numN() const {return numNode;} $/;"	f	class:Ckt	access:public	signature:() const
+Ckt::numNode	Ckt.h	/^		int numNode;$/;"	m	class:Ckt	access:private
+Ckt::numberNode	Ckt.cpp	/^void Ckt::numberNode() {$/;"	f	class:Ckt	signature:()
+Ckt::numberNode	Ckt.h	/^		void numberNode(); $/;"	p	class:Ckt	access:private	signature:()
+Ckt::out	Ckt.h	/^		bool out;	\/\/out appear$/;"	m	class:Ckt	access:private
+Ckt::pairInOut	Ckt.h	/^		inline bool pairInOut() const {return src && out;}$/;"	f	class:Ckt	access:public	signature:() const
+Ckt::parseAC	Ckt.cpp	/^void Ckt::parseAC(int type, int step, double s, double e) {$/;"	f	class:Ckt	signature:(int type, int step, double s, double e)
+Ckt::parseAC	Ckt.h	/^		void parseAC(int type, int step, double s, double e);$/;"	p	class:Ckt	access:public	signature:(int type, int step, double s, double e)
+Ckt::parseCCXS	Ckt.cpp	/^void Ckt::parseCCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v)
+Ckt::parseCCXS	Ckt.h	/^		void parseCCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v)
+Ckt::parseIsrc	Ckt.cpp	/^void Ckt::parseIsrc(const char* eleName, const char* nName1, const char* nName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+Ckt::parseIsrc	Ckt.h	/^		void parseIsrc(const char* eleName, const char* nName1, const char* nName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+Ckt::parseOutCC	Ckt.cpp	/^void Ckt::parseOutCC(const char* volName) {$/;"	f	class:Ckt	signature:(const char* volName)
+Ckt::parseOutCC	Ckt.h	/^		void parseOutCC(const char* volName);$/;"	p	class:Ckt	access:public	signature:(const char* volName)
+Ckt::parseOutVC	Ckt.cpp	/^void Ckt::parseOutVC(const char* nName1, const char* nName2) {$/;"	f	class:Ckt	signature:(const char* nName1, const char* nName2)
+Ckt::parseOutVC	Ckt.h	/^		void parseOutVC(const char* nName1, const char* nName2);$/;"	p	class:Ckt	access:public	signature:(const char* nName1, const char* nName2)
+Ckt::parseRLC	Ckt.cpp	/^void Ckt::parseRLC(const char* eleName, const char* nName1, const char*nName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* nName1, const char*nName2, double v)
+Ckt::parseRLC	Ckt.h	/^		void parseRLC(const char* eleName, const char* nName1, const char* nName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+Ckt::parseVCXS	Ckt.cpp	/^void Ckt::parseVCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v)
+Ckt::parseVCXS	Ckt.h	/^		void parseVCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v)
+Ckt::parseVsrc	Ckt.cpp	/^void Ckt::parseVsrc(const char* eleName, const char* nName1, const char* nName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+Ckt::parseVsrc	Ckt.h	/^		void parseVsrc(const char* eleName, const char* nName1, const char* nName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+Ckt::printCkt	Ckt.cpp	/^void Ckt::printCkt() const {$/;"	f	class:Ckt	signature:() const
+Ckt::printCkt	Ckt.h	/^		void printCkt() const;$/;"	p	class:Ckt	access:public	signature:() const
+Ckt::removeAllV	Ckt.cpp	/^void Ckt::removeAllV() {$/;"	f	class:Ckt	signature:()
+Ckt::removeAllV	Ckt.h	/^		void removeAllV();$/;"	p	class:Ckt	access:private	signature:()
+Ckt::src	Ckt.h	/^		bool src;	\/\/src appear$/;"	m	class:Ckt	access:private
+Ckt::~Ckt	Ckt.cpp	/^Ckt::~Ckt() {$/;"	f	class:Ckt	signature:()
+Ckt::~Ckt	Ckt.h	/^		~Ckt();$/;"	p	class:Ckt	access:public	signature:()
+Compare	HashGPDDNode.cpp	/^bool HashGPDDNode::Compare(const GPDDNode* node1, const GPDDNode* node2) {$/;"	f	class:HashGPDDNode	signature:(const GPDDNode* node1, const GPDDNode* node2)
+Compare	HashGPDDNode.h	/^		bool Compare(const GPDDNode* node1, const GPDDNode* node2);$/;"	p	class:HashGPDDNode	access:private	signature:(const GPDDNode* node1, const GPDDNode* node2)
+Compare	HashGraph.cpp	/^bool HashGraph::Compare(const Graph* g1, const Graph* g2) {$/;"	f	class:HashGraph	signature:(const Graph* g1, const Graph* g2)
+Compare	HashGraph.h	/^		bool Compare(const Graph* g1, const Graph* g2);$/;"	p	class:HashGraph	access:private	signature:(const Graph* g1, const Graph* g2)
+Compare	HashReduction.cpp	/^bool HashReduction::Compare(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero) {$/;"	f	class:HashReduction	signature:(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero)
+Compare	HashReduction.h	/^		bool Compare(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero);$/;"	p	class:HashReduction	access:private	signature:(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero)
+DEC	Analysis.h	/^enum ACTYPE {LIN, DEC, OCT};$/;"	e	enum:ACTYPE
+Edge	GPDD_struct.h	/^	Edge() {}$/;"	f	struct:Edge	access:public	signature:()
+Edge	GPDD_struct.h	/^	Edge(const Edge &e):$/;"	f	struct:Edge	access:public	signature:(const Edge &e)
+Edge	GPDD_struct.h	/^	Edge(int n1, int n2, Symbol* s, int t):$/;"	f	struct:Edge	access:public	signature:(int n1, int n2, Symbol* s, int t)
+Edge	GPDD_struct.h	/^struct Edge {$/;"	s
+Edge::Edge	GPDD_struct.h	/^	Edge() {}$/;"	f	struct:Edge	access:public	signature:()
+Edge::Edge	GPDD_struct.h	/^	Edge(const Edge &e):$/;"	f	struct:Edge	access:public	signature:(const Edge &e)
+Edge::Edge	GPDD_struct.h	/^	Edge(int n1, int n2, Symbol* s, int t):$/;"	f	struct:Edge	access:public	signature:(int n1, int n2, Symbol* s, int t)
+Edge::node1	GPDD_struct.h	/^	int node1;$/;"	m	struct:Edge	access:public
+Edge::node2	GPDD_struct.h	/^	int node2;$/;"	m	struct:Edge	access:public
+Edge::sym	GPDD_struct.h	/^	Symbol *sym;$/;"	m	struct:Edge	access:public
+Edge::type	GPDD_struct.h	/^	int type;$/;"	m	struct:Edge	access:public
+EdgeType	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	g
+Evaluate	GPDD.cpp	/^complex<double> GPDD::Evaluate() const {$/;"	f	class:GPDD	signature:() const
+Evaluate	GPDD.h	/^		complex<double> Evaluate() const;$/;"	p	class:GPDD	access:private	signature:() const
+Exclude	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Exclude(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
+Exclude	GPDD.h	/^		pair<GPDDNode*, bool> Exclude(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
+FLEXSPAWN	Makefile	/^FLEXSPAWN = SpScanner.cpp$/;"	m
+GPDD	GPDD.cpp	/^GPDD::GPDD(const Ckt* myCkt) {$/;"	f	class:GPDD	signature:(const Ckt* myCkt)
+GPDD	GPDD.h	/^		GPDD(const Ckt* myCkt);$/;"	p	class:GPDD	access:public	signature:(const Ckt* myCkt)
+GPDD	GPDD.h	/^class GPDD {$/;"	c
+GPDD::AnalysisPrint	GPDD.cpp	/^void GPDD::AnalysisPrint() const {$/;"	f	class:GPDD	signature:() const
+GPDD::AnalysisPrint	GPDD.h	/^		void AnalysisPrint() const;$/;"	p	class:GPDD	access:public	signature:() const
+GPDD::Calculation	GPDD.cpp	/^void GPDD::Calculation() {$/;"	f	class:GPDD	signature:()
+GPDD::Calculation	GPDD.h	/^		void Calculation();$/;"	p	class:GPDD	access:public	signature:()
+GPDD::Evaluate	GPDD.cpp	/^complex<double> GPDD::Evaluate() const {$/;"	f	class:GPDD	signature:() const
+GPDD::Evaluate	GPDD.h	/^		complex<double> Evaluate() const;$/;"	p	class:GPDD	access:private	signature:() const
+GPDD::Exclude	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Exclude(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
+GPDD::Exclude	GPDD.h	/^		pair<GPDDNode*, bool> Exclude(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
+GPDD::GPDD	GPDD.cpp	/^GPDD::GPDD(const Ckt* myCkt) {$/;"	f	class:GPDD	signature:(const Ckt* myCkt)
+GPDD::GPDD	GPDD.h	/^		GPDD(const Ckt* myCkt);$/;"	p	class:GPDD	access:public	signature:(const Ckt* myCkt)
+GPDD::GPDDNodeHash	GPDD.h	/^		HashGPDDNode GPDDNodeHash;$/;"	m	class:GPDD	access:private
+GPDD::GPDDOne	GPDD.h	/^		GPDDNode* GPDDOne;$/;"	m	class:GPDD	access:private
+GPDD::GPDDRoot	GPDD.h	/^		GPDDNode* GPDDRoot;$/;"	m	class:GPDD	access:private
+GPDD::GPDDZero	GPDD.h	/^		GPDDNode* GPDDZero;$/;"	m	class:GPDD	access:private
+GPDD::Include	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Include(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
+GPDD::Include	GPDD.h	/^		pair<GPDDNode*, bool> Include(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
+GPDD::PI	GPDD.h	/^		const static double PI = 3.14159265358979323846264338327950288;$/;"	m	class:GPDD	access:private
+GPDD::ReductionHash	GPDD.h	/^		HashReduction ReductionHash;$/;"	m	class:GPDD	access:private
+GPDD::TIME_UNIT	GPDD.h	/^		const static long TIME_UNIT = 1000000;$/;"	m	class:GPDD	access:private
+GPDD::anaAC	GPDD.h	/^		Analysis *anaAC;$/;"	m	class:GPDD	access:private
+GPDD::caled	GPDD.h	/^		bool caled;$/;"	m	class:GPDD	access:private
+GPDD::cirTime	GPDD.h	/^		long cirTime;$/;"	m	class:GPDD	access:private
+GPDD::expand	GPDD.cpp	/^void GPDD::expand(bool step) {$/;"	f	class:GPDD	signature:(bool step)
+GPDD::expand	GPDD.h	/^		void expand(bool step = false);$/;"	p	class:GPDD	access:public	signature:(bool step = false)
+GPDD::expandNode	GPDD.h	/^		long expandNode[3];$/;"	m	class:GPDD	access:private
+GPDD::expandTime	GPDD.h	/^		long expandTime;$/;"	m	class:GPDD	access:private
+GPDD::expanded	GPDD.h	/^		bool expanded;$/;"	m	class:GPDD	access:private
+GPDD::graphHash	GPDD.h	/^		HashGraph graphHash;$/;"	m	class:GPDD	access:private
+GPDD::graphNode	GPDD.h	/^		long graphNode[3];$/;"	m	class:GPDD	access:private
+GPDD::init	GPDD.cpp	/^void GPDD::init() {$/;"	f	class:GPDD	signature:()
+GPDD::init	GPDD.h	/^		void init();$/;"	p	class:GPDD	access:public	signature:()
+GPDD::initTime	GPDD.h	/^		long initTime;$/;"	m	class:GPDD	access:private
+GPDD::inited	GPDD.h	/^		bool inited;$/;"	m	class:GPDD	access:private
+GPDD::maxEFH	GPDD.h	/^		int maxEFH;$/;"	m	class:GPDD	access:private
+GPDD::nullorList	GPDD.h	/^		list<Symbol*> nullorList;$/;"	m	class:GPDD	access:private
+GPDD::numEdge	GPDD.h	/^		int numEdge;$/;"	m	class:GPDD	access:private
+GPDD::numNode	GPDD.h	/^		int numNode;$/;"	m	class:GPDD	access:private
+GPDD::onceAvgCalTime	GPDD.h	/^		long onceAvgCalTime;$/;"	m	class:GPDD	access:private
+GPDD::printConnection	GPDD.cpp	/^void GPDD::printConnection(const GPDDNode* curNode) const {$/;"	f	class:GPDD	signature:(const GPDDNode* curNode) const
+GPDD::printConnection	GPDD.h	/^		void printConnection(const GPDDNode* curNode) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* curNode) const
+GPDD::printGPDD	GPDD.cpp	/^void GPDD::printGPDD() const {$/;"	f	class:GPDD	signature:() const
+GPDD::printGPDD	GPDD.h	/^		void printGPDD() const;$/;"	p	class:GPDD	access:public	signature:() const
+GPDD::printInit	GPDD.cpp	/^void GPDD::printInit() const {$/;"	f	class:GPDD	signature:() const
+GPDD::printInit	GPDD.h	/^		void printInit() const;$/;"	p	class:GPDD	access:public	signature:() const
+GPDD::printSymbol	GPDD.cpp	/^void GPDD::printSymbol() const {$/;"	f	class:GPDD	signature:() const
+GPDD::printSymbol	GPDD.h	/^		void printSymbol() const;$/;"	p	class:GPDD	access:public	signature:() const
+GPDD::reduceNode	GPDD.h	/^		long reduceNode[3];$/;"	m	class:GPDD	access:private
+GPDD::reduceTime	GPDD.h	/^		long reduceTime;$/;"	m	class:GPDD	access:private
+GPDD::reduction	GPDD.cpp	/^void GPDD::reduction() {$/;"	f	class:GPDD	signature:()
+GPDD::reduction	GPDD.h	/^		void reduction();$/;"	p	class:GPDD	access:public	signature:()
+GPDD::stepExpand	GPDD.h	/^		bool stepExpand;$/;"	m	class:GPDD	access:private
+GPDD::stepExpandPrint	GPDD.cpp	/^void GPDD::stepExpandPrint(const GPDDNode* curNode) const {$/;"	f	class:GPDD	signature:(const GPDDNode* curNode) const
+GPDD::stepExpandPrint	GPDD.h	/^		void stepExpandPrint(const GPDDNode* curNode) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* curNode) const
+GPDD::symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
+GPDD::tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
+GPDD::updateSymbol	GPDD.cpp	/^void GPDD::updateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)
+GPDD::updateSymbol	GPDD.h	/^		void updateSymbol(const double freq);$/;"	p	class:GPDD	access:private	signature:(const double freq)
+GPDD::wholeCalTime	GPDD.h	/^		long wholeCalTime;$/;"	m	class:GPDD	access:private
+GPDD::~GPDD	GPDD.cpp	/^GPDD::~GPDD() {$/;"	f	class:GPDD	signature:()
+GPDD::~GPDD	GPDD.h	/^		~GPDD();$/;"	p	class:GPDD	access:public	signature:()
+GPDDNODE_H	GPDDNode.h	2;"	d
+GPDDNode	GPDDNode.h	/^	GPDDNode():$/;"	f	struct:GPDDNode	access:public	signature:()
+GPDDNode	GPDDNode.h	/^struct GPDDNode {$/;"	s
+GPDDNode::GPDDNode	GPDDNode.h	/^	GPDDNode():$/;"	f	struct:GPDDNode	access:public	signature:()
+GPDDNode::NF	GPDDNode.h	/^	int NF;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::RNode	GPDDNode.h	/^	GPDDNode* RNode;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::ZS	GPDDNode.h	/^	bool ZS;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::alterS	GPDDNode.h	/^	bool alterS;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::exNode	GPDDNode.h	/^	GPDDNode* exNode;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::exSign	GPDDNode.h	/^	bool inSign, exSign;	\/\/true for 1, false for -1$/;"	m	struct:GPDDNode	access:public
+GPDDNode::inNode	GPDDNode.h	/^	GPDDNode* inNode;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::inSign	GPDDNode.h	/^	bool inSign, exSign;	\/\/true for 1, false for -1$/;"	m	struct:GPDDNode	access:public
+GPDDNode::leftG	GPDDNode.h	/^	Graph* leftG;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::mark	GPDDNode.h	/^	bool mark;				\/\/For tranverse$/;"	m	struct:GPDDNode	access:public
+GPDDNode::numEFH	GPDDNode.h	/^	int numEFH;				\/\/EFH number below this node$/;"	m	struct:GPDDNode	access:public
+GPDDNode::rightG	GPDDNode.h	/^	Graph* rightG;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::sym	GPDDNode.h	/^	Symbol* sym;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::value	GPDDNode.h	/^	complex<double> value;$/;"	m	struct:GPDDNode	access:public
+GPDDNodeHash	GPDD.h	/^		HashGPDDNode GPDDNodeHash;$/;"	m	class:GPDD	access:private
+GPDDOne	GPDD.h	/^		GPDDNode* GPDDOne;$/;"	m	class:GPDD	access:private
+GPDDRoot	GPDD.h	/^		GPDDNode* GPDDRoot;$/;"	m	class:GPDD	access:private
+GPDDZero	GPDD.h	/^		GPDDNode* GPDDZero;$/;"	m	class:GPDD	access:private
+GPDD_H	GPDD.h	2;"	d
+GPDD_STRUCT_H	GPDD_struct.h	2;"	d
+GRAPH_H	Graph.h	2;"	d
+Graph	Graph.cpp	/^Graph::Graph() {$/;"	f	class:Graph	signature:()
+Graph	Graph.cpp	/^Graph::Graph(const Graph *otherGraph) {$/;"	f	class:Graph	signature:(const Graph *otherGraph)
+Graph	Graph.cpp	/^Graph::Graph(int n) {$/;"	f	class:Graph	signature:(int n)
+Graph	Graph.h	/^		Graph();$/;"	p	class:Graph	access:public	signature:()
+Graph	Graph.h	/^		Graph(const Graph *otherGpaph);$/;"	p	class:Graph	access:public	signature:(const Graph *otherGpaph)
+Graph	Graph.h	/^		Graph(int n);$/;"	p	class:Graph	access:public	signature:(int n)
+Graph	Graph.h	/^class Graph {$/;"	c
+Graph::Graph	Graph.cpp	/^Graph::Graph() {$/;"	f	class:Graph	signature:()
+Graph::Graph	Graph.cpp	/^Graph::Graph(const Graph *otherGraph) {$/;"	f	class:Graph	signature:(const Graph *otherGraph)
+Graph::Graph	Graph.cpp	/^Graph::Graph(int n) {$/;"	f	class:Graph	signature:(int n)
+Graph::Graph	Graph.h	/^		Graph();$/;"	p	class:Graph	access:public	signature:()
+Graph::Graph	Graph.h	/^		Graph(const Graph *otherGpaph);$/;"	p	class:Graph	access:public	signature:(const Graph *otherGpaph)
+Graph::Graph	Graph.h	/^		Graph(int n);$/;"	p	class:Graph	access:public	signature:(int n)
+Graph::Open	Graph.cpp	/^int Graph::Open(const Edge* e) {$/;"	f	class:Graph	signature:(const Edge* e)
+Graph::Open	Graph.h	/^		int Open(const Edge* e);$/;"	p	class:Graph	access:public	signature:(const Edge* e)
+Graph::Short	Graph.cpp	/^int Graph::Short(const Edge* e, bool &sign) {$/;"	f	class:Graph	signature:(const Edge* e, bool &sign)
+Graph::Short	Graph.h	/^		int Short(const Edge* e, bool &sign);$/;"	p	class:Graph	access:public	signature:(const Edge* e, bool &sign)
+Graph::addEdge	Graph.cpp	/^void Graph::addEdge(const Edge* e) {$/;"	f	class:Graph	signature:(const Edge* e)
+Graph::addEdge	Graph.h	/^		void addEdge(const Edge* e);$/;"	p	class:Graph	access:public	signature:(const Edge* e)
+Graph::addFlag	Graph.h	/^		bool addFlag;$/;"	m	class:Graph	access:private
+Graph::eTable	Graph.h	/^		list<Edge> eTable;$/;"	m	class:Graph	access:public
+Graph::edgeTable	Graph.h	/^		Edge* edgeTable;$/;"	m	class:Graph	access:public
+Graph::genEdgeT	Graph.cpp	/^void Graph::genEdgeT() {$/;"	f	class:Graph	signature:()
+Graph::genEdgeT	Graph.h	/^		void genEdgeT();$/;"	p	class:Graph	access:private	signature:()
+Graph::nEdge	Graph.h	/^		int nEdge;$/;"	m	class:Graph	access:public
+Graph::nEffectiveEdge	Graph.h	/^		int nEffectiveEdge;$/;"	m	class:Graph	access:public
+Graph::nNode	Graph.h	/^		int nNode;$/;"	m	class:Graph	access:public
+Graph::next	Graph.h	/^		Graph* next;$/;"	m	class:Graph	access:public
+Graph::printGraph	Graph.cpp	/^void Graph::printGraph() const {$/;"	f	class:Graph	signature:() const
+Graph::printGraph	Graph.h	/^		void printGraph() const;$/;"	p	class:Graph	access:public	signature:() const
+Graph::shortNullor	Graph.cpp	/^void Graph::shortNullor() {$/;"	f	class:Graph	signature:()
+Graph::shortNullor	Graph.h	/^		void shortNullor();$/;"	p	class:Graph	access:public	signature:()
+Graph::~Graph	Graph.cpp	/^Graph::~Graph() {$/;"	f	class:Graph	signature:()
+Graph::~Graph	Graph.h	/^		~Graph();$/;"	p	class:Graph	access:public	signature:()
+HASHGPDDNODE_H	HashGPDDNode.h	2;"	d
+HASHGRAPH_H	HashGraph.h	2;"	d
+HASHREDUCTION_H	HashReduction.h	2;"	d
+HEADERS	Makefile	/^HEADERS = Analysis.h Ckt.h GPDD.h GPDD_struct.h GPDDNode.h Graph.h HashGraph.h HashGPDDNode.h HashReduction.h$/;"	m
+HEADP	Makefile	/^HEADP = SpParser.hpp$/;"	m
+HashFunc	HashGPDDNode.cpp	/^int HashGPDDNode::HashFunc(const GPDDNode* node) {$/;"	f	class:HashGPDDNode	signature:(const GPDDNode* node)
+HashFunc	HashGPDDNode.h	/^		int HashFunc(const GPDDNode* node);$/;"	p	class:HashGPDDNode	access:private	signature:(const GPDDNode* node)
+HashFunc	HashGraph.cpp	/^int HashGraph::HashFunc(const Graph* g) {$/;"	f	class:HashGraph	signature:(const Graph* g)
+HashFunc	HashGraph.h	/^		int HashFunc(const Graph* g);$/;"	p	class:HashGraph	access:private	signature:(const Graph* g)
+HashFunc	HashReduction.cpp	/^int HashReduction::HashFunc(const GPDDNode* node) {$/;"	f	class:HashReduction	signature:(const GPDDNode* node)
+HashFunc	HashReduction.h	/^		int HashFunc(const GPDDNode* node);$/;"	p	class:HashReduction	access:private	signature:(const GPDDNode* node)
+HashGPDDNode	HashGPDDNode.cpp	/^HashGPDDNode::HashGPDDNode() {$/;"	f	class:HashGPDDNode	signature:()
+HashGPDDNode	HashGPDDNode.h	/^		HashGPDDNode();$/;"	p	class:HashGPDDNode	access:public	signature:()
+HashGPDDNode	HashGPDDNode.h	/^class HashGPDDNode {$/;"	c
+HashGPDDNode::Compare	HashGPDDNode.cpp	/^bool HashGPDDNode::Compare(const GPDDNode* node1, const GPDDNode* node2) {$/;"	f	class:HashGPDDNode	signature:(const GPDDNode* node1, const GPDDNode* node2)
+HashGPDDNode::Compare	HashGPDDNode.h	/^		bool Compare(const GPDDNode* node1, const GPDDNode* node2);$/;"	p	class:HashGPDDNode	access:private	signature:(const GPDDNode* node1, const GPDDNode* node2)
+HashGPDDNode::HashFunc	HashGPDDNode.cpp	/^int HashGPDDNode::HashFunc(const GPDDNode* node) {$/;"	f	class:HashGPDDNode	signature:(const GPDDNode* node)
+HashGPDDNode::HashFunc	HashGPDDNode.h	/^		int HashFunc(const GPDDNode* node);$/;"	p	class:HashGPDDNode	access:private	signature:(const GPDDNode* node)
+HashGPDDNode::HashGPDDNode	HashGPDDNode.cpp	/^HashGPDDNode::HashGPDDNode() {$/;"	f	class:HashGPDDNode	signature:()
+HashGPDDNode::HashGPDDNode	HashGPDDNode.h	/^		HashGPDDNode();$/;"	p	class:HashGPDDNode	access:public	signature:()
+HashGPDDNode::HashTable	HashGPDDNode.h	/^		typedef map<int, HashNode*> HashTable;$/;"	t	class:HashGPDDNode	access:private
+HashGPDDNode::KeyNum	HashGPDDNode.h	/^		inline int KeyNum() const {return hTable.size();}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+HashGPDDNode::NodeNum	HashGPDDNode.h	/^		inline int NodeNum() const {return nodeNum;}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+HashGPDDNode::PRIME	HashGPDDNode.h	/^		const static int PRIME = 2024327;$/;"	m	class:HashGPDDNode	access:private
+HashGPDDNode::Print	HashGPDDNode.cpp	/^void HashGPDDNode::Print() const {$/;"	f	class:HashGPDDNode	signature:() const
+HashGPDDNode::Print	HashGPDDNode.h	/^		void Print() const;$/;"	p	class:HashGPDDNode	access:public	signature:() const
+HashGPDDNode::TimesOfCrash	HashGPDDNode.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+HashGPDDNode::TimesOfHit	HashGPDDNode.h	/^		inline int TimesOfHit() const {return hitTime;}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+HashGPDDNode::crashTime	HashGPDDNode.h	/^		int crashTime;$/;"	m	class:HashGPDDNode	access:private
+HashGPDDNode::hTable	HashGPDDNode.h	/^		HashTable hTable;$/;"	m	class:HashGPDDNode	access:private
+HashGPDDNode::hitTime	HashGPDDNode.h	/^		int hitTime;$/;"	m	class:HashGPDDNode	access:private
+HashGPDDNode::insert	HashGPDDNode.cpp	/^GPDDNode* HashGPDDNode::insert(GPDDNode* node) {$/;"	f	class:HashGPDDNode	signature:(GPDDNode* node)
+HashGPDDNode::insert	HashGPDDNode.h	/^		GPDDNode* insert(GPDDNode* node);$/;"	p	class:HashGPDDNode	access:public	signature:(GPDDNode* node)
+HashGPDDNode::it_HashTable	HashGPDDNode.h	/^		typedef HashTable::iterator it_HashTable;$/;"	t	class:HashGPDDNode	access:private
+HashGPDDNode::nodeNum	HashGPDDNode.h	/^		int nodeNum;$/;"	m	class:HashGPDDNode	access:private
+HashGPDDNode::~HashGPDDNode	HashGPDDNode.cpp	/^HashGPDDNode::~HashGPDDNode() {$/;"	f	class:HashGPDDNode	signature:()
+HashGPDDNode::~HashGPDDNode	HashGPDDNode.h	/^		~HashGPDDNode();$/;"	p	class:HashGPDDNode	access:public	signature:()
+HashGraph	HashGraph.cpp	/^HashGraph::HashGraph() {$/;"	f	class:HashGraph	signature:()
+HashGraph	HashGraph.h	/^		HashGraph();$/;"	p	class:HashGraph	access:public	signature:()
+HashGraph	HashGraph.h	/^class HashGraph {$/;"	c
+HashGraph::BKDRHash	HashGraph.cpp	/^unsigned int HashGraph::BKDRHash(const string s) {$/;"	f	class:HashGraph	signature:(const string s)
+HashGraph::BKDRHash	HashGraph.h	/^		unsigned int BKDRHash(const string s);$/;"	p	class:HashGraph	access:private	signature:(const string s)
+HashGraph::Compare	HashGraph.cpp	/^bool HashGraph::Compare(const Graph* g1, const Graph* g2) {$/;"	f	class:HashGraph	signature:(const Graph* g1, const Graph* g2)
+HashGraph::Compare	HashGraph.h	/^		bool Compare(const Graph* g1, const Graph* g2);$/;"	p	class:HashGraph	access:private	signature:(const Graph* g1, const Graph* g2)
+HashGraph::HashFunc	HashGraph.cpp	/^int HashGraph::HashFunc(const Graph* g) {$/;"	f	class:HashGraph	signature:(const Graph* g)
+HashGraph::HashFunc	HashGraph.h	/^		int HashFunc(const Graph* g);$/;"	p	class:HashGraph	access:private	signature:(const Graph* g)
+HashGraph::HashGraph	HashGraph.cpp	/^HashGraph::HashGraph() {$/;"	f	class:HashGraph	signature:()
+HashGraph::HashGraph	HashGraph.h	/^		HashGraph();$/;"	p	class:HashGraph	access:public	signature:()
+HashGraph::KeyNum	HashGraph.h	/^		inline int KeyNum() const {return keyNum;}$/;"	f	class:HashGraph	access:public	signature:() const
+HashGraph::NodeNum	HashGraph.h	/^		inline int NodeNum() const {return nodeNum;}$/;"	f	class:HashGraph	access:public	signature:() const
+HashGraph::PRIME	HashGraph.h	/^		const static int PRIME = 9854791;$/;"	m	class:HashGraph	access:private
+HashGraph::Print	HashGraph.cpp	/^void HashGraph::Print() const {$/;"	f	class:HashGraph	signature:() const
+HashGraph::Print	HashGraph.h	/^		void Print() const;$/;"	p	class:HashGraph	access:public	signature:() const
+HashGraph::TimesOfCrash	HashGraph.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashGraph	access:public	signature:() const
+HashGraph::TimesOfHit	HashGraph.h	/^		inline int TimesOfHit() const {return hitTime;}$/;"	f	class:HashGraph	access:public	signature:() const
+HashGraph::crashTime	HashGraph.h	/^		int crashTime;$/;"	m	class:HashGraph	access:private
+HashGraph::hTable	HashGraph.h	/^		Graph* hTable[PRIME];$/;"	m	class:HashGraph	access:private
+HashGraph::hitTime	HashGraph.h	/^		int hitTime;$/;"	m	class:HashGraph	access:private
+HashGraph::insert	HashGraph.cpp	/^Graph* HashGraph::insert(Graph* g) {$/;"	f	class:HashGraph	signature:(Graph* g)
+HashGraph::insert	HashGraph.h	/^		Graph* insert(Graph *g);$/;"	p	class:HashGraph	access:public	signature:(Graph *g)
+HashGraph::keyNum	HashGraph.h	/^		int keyNum;$/;"	m	class:HashGraph	access:private
+HashGraph::nodeNum	HashGraph.h	/^		int nodeNum;$/;"	m	class:HashGraph	access:private
+HashGraph::~HashGraph	HashGraph.cpp	/^HashGraph::~HashGraph() {$/;"	f	class:HashGraph	signature:()
+HashGraph::~HashGraph	HashGraph.h	/^		~HashGraph();$/;"	p	class:HashGraph	access:public	signature:()
+HashNode	HashGPDDNode.h	/^struct HashNode {$/;"	s
+HashNode::NodeInfo	HashGPDDNode.h	/^	GPDDNode* NodeInfo;$/;"	m	struct:HashNode	access:public
+HashNode::next	HashGPDDNode.h	/^	HashNode* next;$/;"	m	struct:HashNode	access:public
+HashR	HashReduction.h	/^struct HashR {$/;"	s
+HashR::NodeInfo	HashReduction.h	/^	GPDDNode* NodeInfo;$/;"	m	struct:HashR	access:public
+HashR::next	HashReduction.h	/^	HashR* next;$/;"	m	struct:HashR	access:public
+HashReduction	HashReduction.cpp	/^HashReduction::HashReduction() {$/;"	f	class:HashReduction	signature:()
+HashReduction	HashReduction.h	/^		HashReduction();$/;"	p	class:HashReduction	access:public	signature:()
+HashReduction	HashReduction.h	/^class HashReduction {$/;"	c
+HashReduction::Compare	HashReduction.cpp	/^bool HashReduction::Compare(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero) {$/;"	f	class:HashReduction	signature:(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero)
+HashReduction::Compare	HashReduction.h	/^		bool Compare(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero);$/;"	p	class:HashReduction	access:private	signature:(const GPDDNode* node1, const GPDDNode* node2, const GPDDNode* Zero)
+HashReduction::HashFunc	HashReduction.cpp	/^int HashReduction::HashFunc(const GPDDNode* node) {$/;"	f	class:HashReduction	signature:(const GPDDNode* node)
+HashReduction::HashFunc	HashReduction.h	/^		int HashFunc(const GPDDNode* node);$/;"	p	class:HashReduction	access:private	signature:(const GPDDNode* node)
+HashReduction::HashReduction	HashReduction.cpp	/^HashReduction::HashReduction() {$/;"	f	class:HashReduction	signature:()
+HashReduction::HashReduction	HashReduction.h	/^		HashReduction();$/;"	p	class:HashReduction	access:public	signature:()
+HashReduction::HashTable	HashReduction.h	/^		typedef map<int, HashR*> HashTable;$/;"	t	class:HashReduction	access:private
+HashReduction::KeyNum	HashReduction.h	/^		inline int KeyNum() const {return hTable.size();}$/;"	f	class:HashReduction	access:public	signature:() const
+HashReduction::NodeNum	HashReduction.h	/^		inline int NodeNum() const {return nodeNum;}$/;"	f	class:HashReduction	access:public	signature:() const
+HashReduction::PRIME	HashReduction.h	/^		const static int PRIME = 46153;$/;"	m	class:HashReduction	access:private
+HashReduction::Print	HashReduction.cpp	/^void HashReduction::Print() const {$/;"	f	class:HashReduction	signature:() const
+HashReduction::Print	HashReduction.h	/^		void Print() const;$/;"	p	class:HashReduction	access:public	signature:() const
+HashReduction::TimesOfCrash	HashReduction.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashReduction	access:public	signature:() const
+HashReduction::TimesOfHit	HashReduction.h	/^		inline int TimesOfHit() const {return hitTime;}$/;"	f	class:HashReduction	access:public	signature:() const
+HashReduction::clean	HashReduction.cpp	/^void HashReduction::clean() {$/;"	f	class:HashReduction	signature:()
+HashReduction::clean	HashReduction.h	/^		void clean();$/;"	p	class:HashReduction	access:public	signature:()
+HashReduction::crashTime	HashReduction.h	/^		int crashTime;$/;"	m	class:HashReduction	access:private
+HashReduction::hTable	HashReduction.h	/^		HashTable hTable;$/;"	m	class:HashReduction	access:private
+HashReduction::hitTime	HashReduction.h	/^		int hitTime;$/;"	m	class:HashReduction	access:private
+HashReduction::insert	HashReduction.cpp	/^GPDDNode* HashReduction::insert(GPDDNode* node, bool &flag, const GPDDNode* Zero) {$/;"	f	class:HashReduction	signature:(GPDDNode* node, bool &flag, const GPDDNode* Zero)
+HashReduction::insert	HashReduction.h	/^		GPDDNode* insert(GPDDNode* node, bool &flag, const GPDDNode* Zero);$/;"	p	class:HashReduction	access:public	signature:(GPDDNode* node, bool &flag, const GPDDNode* Zero)
+HashReduction::it_HashTable	HashReduction.h	/^		typedef HashTable::iterator it_HashTable;$/;"	t	class:HashReduction	access:private
+HashReduction::nodeNum	HashReduction.h	/^		int nodeNum;$/;"	m	class:HashReduction	access:private
+HashReduction::~HashReduction	HashReduction.cpp	/^HashReduction::~HashReduction() {$/;"	f	class:HashReduction	signature:()
+HashReduction::~HashReduction	HashReduction.h	/^		~HashReduction();$/;"	p	class:HashReduction	access:public	signature:()
+HashTable	HashGPDDNode.h	/^		typedef map<int, HashNode*> HashTable;$/;"	t	class:HashGPDDNode	access:private
+HashTable	HashReduction.h	/^		typedef map<int, HashR*> HashTable;$/;"	t	class:HashReduction	access:private
+Include	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Include(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
+Include	GPDD.h	/^		pair<GPDDNode*, bool> Include(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
+KeyNum	HashGPDDNode.h	/^		inline int KeyNum() const {return hTable.size();}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+KeyNum	HashGraph.h	/^		inline int KeyNum() const {return keyNum;}$/;"	f	class:HashGraph	access:public	signature:() const
+KeyNum	HashReduction.h	/^		inline int KeyNum() const {return hTable.size();}$/;"	f	class:HashReduction	access:public	signature:() const
+LFLAGS	Makefile	/^LFLAGS = -O6 -lfl$/;"	m
+LIN	Analysis.h	/^enum ACTYPE {LIN, DEC, OCT};$/;"	e	enum:ACTYPE
+NF	GPDDNode.h	/^	int NF;$/;"	m	struct:GPDDNode	access:public
+NO	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	e	enum:EdgeType
+NU	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	e	enum:EdgeType
+NodeInfo	HashGPDDNode.h	/^	GPDDNode* NodeInfo;$/;"	m	struct:HashNode	access:public
+NodeInfo	HashReduction.h	/^	GPDDNode* NodeInfo;$/;"	m	struct:HashR	access:public
+NodeNum	HashGPDDNode.h	/^		inline int NodeNum() const {return nodeNum;}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+NodeNum	HashGraph.h	/^		inline int NodeNum() const {return nodeNum;}$/;"	f	class:HashGraph	access:public	signature:() const
+NodeNum	HashReduction.h	/^		inline int NodeNum() const {return nodeNum;}$/;"	f	class:HashReduction	access:public	signature:() const
+OBJP	Makefile	/^OBJP = SpScanner.o SpParser.o$/;"	m
+OBJS	Makefile	/^OBJS = Analysis.o Ckt.o main.o GPDD.o Graph.o HashGraph.o HashGPDDNode.o HashReduction.o$/;"	m
+OCT	Analysis.h	/^enum ACTYPE {LIN, DEC, OCT};$/;"	e	enum:ACTYPE
+Open	Graph.cpp	/^int Graph::Open(const Edge* e) {$/;"	f	class:Graph	signature:(const Edge* e)
+Open	Graph.h	/^		int Open(const Edge* e);$/;"	p	class:Graph	access:public	signature:(const Edge* e)
+PI	GPDD.h	/^		const static double PI = 3.14159265358979323846264338327950288;$/;"	m	class:GPDD	access:private
+PRIME	HashGPDDNode.h	/^		const static int PRIME = 2024327;$/;"	m	class:HashGPDDNode	access:private
+PRIME	HashGraph.h	/^		const static int PRIME = 9854791;$/;"	m	class:HashGraph	access:private
+PRIME	HashReduction.h	/^		const static int PRIME = 46153;$/;"	m	class:HashReduction	access:private
+Print	HashGPDDNode.cpp	/^void HashGPDDNode::Print() const {$/;"	f	class:HashGPDDNode	signature:() const
+Print	HashGPDDNode.h	/^		void Print() const;$/;"	p	class:HashGPDDNode	access:public	signature:() const
+Print	HashGraph.cpp	/^void HashGraph::Print() const {$/;"	f	class:HashGraph	signature:() const
+Print	HashGraph.h	/^		void Print() const;$/;"	p	class:HashGraph	access:public	signature:() const
+Print	HashReduction.cpp	/^void HashReduction::Print() const {$/;"	f	class:HashReduction	signature:() const
+Print	HashReduction.h	/^		void Print() const;$/;"	p	class:HashReduction	access:public	signature:() const
+RNode	GPDDNode.h	/^	GPDDNode* RNode;$/;"	m	struct:GPDDNode	access:public
+ReductionHash	GPDD.h	/^		HashReduction ReductionHash;$/;"	m	class:GPDD	access:private
+SRCS	Makefile	/^SRCS = Analysis.cpp Ckt.cpp main.cpp GPDD.cpp Graph.cpp HashGraph.cpp HashGPDDNode.cpp HashReduction.cpp$/;"	m
+Short	Graph.cpp	/^int Graph::Short(const Edge* e, bool &sign) {$/;"	f	class:Graph	signature:(const Edge* e, bool &sign)
+Short	Graph.h	/^		int Short(const Edge* e, bool &sign);$/;"	p	class:Graph	access:public	signature:(const Edge* e, bool &sign)
+Symbol	GPDD_struct.h	/^struct Symbol {$/;"	s
+Symbol::e	GPDD_struct.h	/^	Edge* e;$/;"	m	struct:Symbol	access:public
+Symbol::lumpedNext	GPDD_struct.h	/^	Symbol* lumpedNext;$/;"	m	struct:Symbol	access:public
+Symbol::name	GPDD_struct.h	/^	string name;$/;"	m	struct:Symbol	access:public
+Symbol::pe	GPDD_struct.h	/^	Edge* pe;$/;"	m	struct:Symbol	access:public
+Symbol::v	GPDD_struct.h	/^	double v;$/;"	m	struct:Symbol	access:public
+Symbol::value	GPDD_struct.h	/^	complex<double> value;$/;"	m	struct:Symbol	access:public
+Symbol::~Symbol	GPDD_struct.h	/^	~Symbol() {delete e; delete pe;}$/;"	f	struct:Symbol	access:public	signature:()
+TARGET	Makefile	/^TARGET = GPDD$/;"	m
+TIME_UNIT	GPDD.h	/^		const static long TIME_UNIT = 1000000;$/;"	m	class:GPDD	access:private
+TimesOfCrash	HashGPDDNode.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+TimesOfCrash	HashGraph.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashGraph	access:public	signature:() const
+TimesOfCrash	HashReduction.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashReduction	access:public	signature:() const
+TimesOfHit	HashGPDDNode.h	/^		inline int TimesOfHit() const {return hitTime;}$/;"	f	class:HashGPDDNode	access:public	signature:() const
+TimesOfHit	HashGraph.h	/^		inline int TimesOfHit() const {return hitTime;}$/;"	f	class:HashGraph	access:public	signature:() const
+TimesOfHit	HashReduction.h	/^		inline int TimesOfHit() const {return hitTime;}$/;"	f	class:HashReduction	access:public	signature:() const
+VC	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	e	enum:EdgeType
+VS	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	e	enum:EdgeType
+Vused	Ckt.h	/^	bool Vused;$/;"	m	struct:cktEdge	access:public
+YZ	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	e	enum:EdgeType
+ZS	GPDDNode.h	/^	bool ZS;$/;"	m	struct:GPDDNode	access:public
+acType	Analysis.h	/^		int acType;$/;"	m	class:Analysis	access:private
+addEdge	Graph.cpp	/^void Graph::addEdge(const Edge* e) {$/;"	f	class:Graph	signature:(const Edge* e)
+addEdge	Graph.h	/^		void addEdge(const Edge* e);$/;"	p	class:Graph	access:public	signature:(const Edge* e)
+addFlag	Graph.h	/^		bool addFlag;$/;"	m	class:Graph	access:private
+allFreq	Analysis.h	/^		vector<double> allFreq;$/;"	m	class:Analysis	access:private
+alterS	GPDDNode.h	/^	bool alterS;$/;"	m	struct:GPDDNode	access:public
+anaAC	Ckt.h	/^		Analysis* anaAC;$/;"	m	class:Ckt	access:private
+anaAC	GPDD.h	/^		Analysis *anaAC;$/;"	m	class:GPDD	access:private
+anaCkt	Ckt.h	/^		inline Analysis* anaCkt() const {return anaAC;}$/;"	f	class:Ckt	access:public	signature:() const
+caled	GPDD.h	/^		bool caled;$/;"	m	class:GPDD	access:private
+check_pair	Ckt.cpp	/^bool Ckt::check_pair() {$/;"	f	class:Ckt	signature:()
+check_pair	Ckt.h	/^		bool check_pair();$/;"	p	class:Ckt	access:private	signature:()
+cirTime	GPDD.h	/^		long cirTime;$/;"	m	class:GPDD	access:private
+cktEdge	Ckt.h	/^struct cktEdge {$/;"	s
+cktEdge::Vused	Ckt.h	/^	bool Vused;$/;"	m	struct:cktEdge	access:public
+cktEdge::name	Ckt.h	/^	string name;$/;"	m	struct:cktEdge	access:public
+cktEdge::node1	Ckt.h	/^	cktNode* node1;$/;"	m	struct:cktEdge	access:public
+cktEdge::node2	Ckt.h	/^	cktNode* node2;$/;"	m	struct:cktEdge	access:public
+cktEdge::pairEdge	Ckt.h	/^	cktEdge* pairEdge;$/;"	m	struct:cktEdge	access:public
+cktEdge::type	Ckt.h	/^	int type;$/;"	m	struct:cktEdge	access:public
+cktEdge::val	Ckt.h	/^	double val;$/;"	m	struct:cktEdge	access:public
+cktEdge::vname	Ckt.h	/^	string vname;$/;"	m	struct:cktEdge	access:public
+cktNode	Ckt.h	/^struct cktNode {$/;"	s
+cktNode::index	Ckt.h	/^	int index;$/;"	m	struct:cktNode	access:public
+cktNode::name	Ckt.h	/^	string name;$/;"	m	struct:cktNode	access:public
+clean	HashReduction.cpp	/^void HashReduction::clean() {$/;"	f	class:HashReduction	signature:()
+clean	HashReduction.h	/^		void clean();$/;"	p	class:HashReduction	access:public	signature:()
+compareDouble	Analysis.cpp	/^bool Analysis::compareDouble(double a, double b) const {$/;"	f	class:Analysis	signature:(double a, double b) const
+compareDouble	Analysis.h	/^		bool compareDouble(double a, double b) const;$/;"	p	class:Analysis	access:private	signature:(double a, double b) const
+crashTime	HashGPDDNode.h	/^		int crashTime;$/;"	m	class:HashGPDDNode	access:private
+crashTime	HashGraph.h	/^		int crashTime;$/;"	m	class:HashGraph	access:private
+crashTime	HashReduction.h	/^		int crashTime;$/;"	m	class:HashReduction	access:private
+e	GPDD_struct.h	/^	Edge* e;$/;"	m	struct:Symbol	access:public
+eList	Ckt.h	/^		inline const list<cktEdge*> &eList() const {return edgeList;}$/;"	f	class:Ckt	access:public	signature:() const
+eTable	Graph.h	/^		list<Edge> eTable;$/;"	m	class:Graph	access:public
+edgeList	Ckt.h	/^		list<cktEdge*> edgeList;$/;"	m	class:Ckt	access:private
+edgeTable	Graph.h	/^		Edge* edgeTable;$/;"	m	class:Graph	access:public
+edgeTypeTranslate	Ckt.cpp	/^string Ckt::edgeTypeTranslate(int type) const {$/;"	f	class:Ckt	signature:(int type) const
+edgeTypeTranslate	Ckt.h	/^		string edgeTypeTranslate(int type) const;$/;"	p	class:Ckt	access:private	signature:(int type) const
+exNode	GPDDNode.h	/^	GPDDNode* exNode;$/;"	m	struct:GPDDNode	access:public
+exSign	GPDDNode.h	/^	bool inSign, exSign;	\/\/true for 1, false for -1$/;"	m	struct:GPDDNode	access:public
+expand	GPDD.cpp	/^void GPDD::expand(bool step) {$/;"	f	class:GPDD	signature:(bool step)
+expand	GPDD.h	/^		void expand(bool step = false);$/;"	p	class:GPDD	access:public	signature:(bool step = false)
+expandNode	GPDD.h	/^		long expandNode[3];$/;"	m	class:GPDD	access:private
+expandTime	GPDD.h	/^		long expandTime;$/;"	m	class:GPDD	access:private
+expanded	GPDD.h	/^		bool expanded;$/;"	m	class:GPDD	access:private
+fend	Analysis.h	/^		double fend;$/;"	m	class:Analysis	access:private
+findCCEdge	Ckt.cpp	/^cktEdge* Ckt::findCCEdge(const char *eName) {$/;"	f	class:Ckt	signature:(const char *eName)
+findCCEdge	Ckt.h	/^		cktEdge* findCCEdge(const char *eName);$/;"	p	class:Ckt	access:private	signature:(const char *eName)
+findEdge	Ckt.cpp	/^cktEdge* Ckt::findEdge(const char *eName) {$/;"	f	class:Ckt	signature:(const char *eName)
+findEdge	Ckt.h	/^		cktEdge* findEdge(const char *eName);$/;"	p	class:Ckt	access:private	signature:(const char *eName)
+findVName	Ckt.cpp	/^cktEdge* Ckt::findVName(cktEdge* VEdge) {$/;"	f	class:Ckt	signature:(cktEdge* VEdge)
+findVName	Ckt.h	/^		cktEdge* findVName(cktEdge* VEdge);$/;"	p	class:Ckt	access:private	signature:(cktEdge* VEdge)
+fstart	Analysis.h	/^		double fstart;$/;"	m	class:Analysis	access:private
+genEdgeT	Graph.cpp	/^void Graph::genEdgeT() {$/;"	f	class:Graph	signature:()
+genEdgeT	Graph.h	/^		void genEdgeT();$/;"	p	class:Graph	access:private	signature:()
+graphHash	GPDD.h	/^		HashGraph graphHash;$/;"	m	class:GPDD	access:private
+graphNode	GPDD.h	/^		long graphNode[3];$/;"	m	class:GPDD	access:private
+hTable	HashGPDDNode.h	/^		HashTable hTable;$/;"	m	class:HashGPDDNode	access:private
+hTable	HashGraph.h	/^		Graph* hTable[PRIME];$/;"	m	class:HashGraph	access:private
+hTable	HashReduction.h	/^		HashTable hTable;$/;"	m	class:HashReduction	access:private
+hitTime	HashGPDDNode.h	/^		int hitTime;$/;"	m	class:HashGPDDNode	access:private
+hitTime	HashGraph.h	/^		int hitTime;$/;"	m	class:HashGraph	access:private
+hitTime	HashReduction.h	/^		int hitTime;$/;"	m	class:HashReduction	access:private
+inNode	GPDDNode.h	/^	GPDDNode* inNode;$/;"	m	struct:GPDDNode	access:public
+inSign	GPDDNode.h	/^	bool inSign, exSign;	\/\/true for 1, false for -1$/;"	m	struct:GPDDNode	access:public
+index	Ckt.h	/^	int index;$/;"	m	struct:cktNode	access:public
+init	GPDD.cpp	/^void GPDD::init() {$/;"	f	class:GPDD	signature:()
+init	GPDD.h	/^		void init();$/;"	p	class:GPDD	access:public	signature:()
+initTime	GPDD.h	/^		long initTime;$/;"	m	class:GPDD	access:private
+inited	GPDD.h	/^		bool inited;$/;"	m	class:GPDD	access:private
+input_bool	main.cpp	/^bool input_bool() {$/;"	f	signature:()
+insert	HashGPDDNode.cpp	/^GPDDNode* HashGPDDNode::insert(GPDDNode* node) {$/;"	f	class:HashGPDDNode	signature:(GPDDNode* node)
+insert	HashGPDDNode.h	/^		GPDDNode* insert(GPDDNode* node);$/;"	p	class:HashGPDDNode	access:public	signature:(GPDDNode* node)
+insert	HashGraph.cpp	/^Graph* HashGraph::insert(Graph* g) {$/;"	f	class:HashGraph	signature:(Graph* g)
+insert	HashGraph.h	/^		Graph* insert(Graph *g);$/;"	p	class:HashGraph	access:public	signature:(Graph *g)
+insert	HashReduction.cpp	/^GPDDNode* HashReduction::insert(GPDDNode* node, bool &flag, const GPDDNode* Zero) {$/;"	f	class:HashReduction	signature:(GPDDNode* node, bool &flag, const GPDDNode* Zero)
+insert	HashReduction.h	/^		GPDDNode* insert(GPDDNode* node, bool &flag, const GPDDNode* Zero);$/;"	p	class:HashReduction	access:public	signature:(GPDDNode* node, bool &flag, const GPDDNode* Zero)
+insertNode	Ckt.cpp	/^cktNode* Ckt::insertNode(const char *nName) {$/;"	f	class:Ckt	signature:(const char *nName)
+insertNode	Ckt.h	/^		cktNode* insertNode(const char *nName);$/;"	p	class:Ckt	access:private	signature:(const char *nName)
+isSet	Analysis.h	/^		inline bool isSet() {return set;}$/;"	f	class:Analysis	access:public	signature:()
+it_HashTable	HashGPDDNode.h	/^		typedef HashTable::iterator it_HashTable;$/;"	t	class:HashGPDDNode	access:private
+it_HashTable	HashReduction.h	/^		typedef HashTable::iterator it_HashTable;$/;"	t	class:HashReduction	access:private
+keyNum	HashGraph.h	/^		int keyNum;$/;"	m	class:HashGraph	access:private
+leftG	GPDDNode.h	/^	Graph* leftG;$/;"	m	struct:GPDDNode	access:public
+lumpedNext	GPDD_struct.h	/^	Symbol* lumpedNext;$/;"	m	struct:Symbol	access:public
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+mark	GPDDNode.h	/^	bool mark;				\/\/For tranverse$/;"	m	struct:GPDDNode	access:public
+maxEFH	GPDD.h	/^		int maxEFH;$/;"	m	class:GPDD	access:private
+nEdge	Graph.h	/^		int nEdge;$/;"	m	class:Graph	access:public
+nEffectiveEdge	Graph.h	/^		int nEffectiveEdge;$/;"	m	class:Graph	access:public
+nNode	Graph.h	/^		int nNode;$/;"	m	class:Graph	access:public
+name	Ckt.h	/^	string name;$/;"	m	struct:cktEdge	access:public
+name	Ckt.h	/^	string name;$/;"	m	struct:cktNode	access:public
+name	GPDD_struct.h	/^	string name;$/;"	m	struct:Symbol	access:public
+next	Graph.h	/^		Graph* next;$/;"	m	class:Graph	access:public
+next	HashGPDDNode.h	/^	HashNode* next;$/;"	m	struct:HashNode	access:public
+next	HashReduction.h	/^	HashR* next;$/;"	m	struct:HashR	access:public
+node1	Ckt.h	/^	cktNode* node1;$/;"	m	struct:cktEdge	access:public
+node1	GPDD_struct.h	/^	int node1;$/;"	m	struct:Edge	access:public
+node2	Ckt.h	/^	cktNode* node2;$/;"	m	struct:cktEdge	access:public
+node2	GPDD_struct.h	/^	int node2;$/;"	m	struct:Edge	access:public
+nodeList	Ckt.h	/^		list<cktNode*> nodeList;$/;"	m	class:Ckt	access:private
+nodeNum	HashGPDDNode.h	/^		int nodeNum;$/;"	m	class:HashGPDDNode	access:private
+nodeNum	HashGraph.h	/^		int nodeNum;$/;"	m	class:HashGraph	access:private
+nodeNum	HashReduction.h	/^		int nodeNum;$/;"	m	class:HashReduction	access:private
+nodeTypeTranslate	Ckt.cpp	/^int Ckt::nodeTypeTranslate(cktNode* node) const {$/;"	f	class:Ckt	signature:(cktNode* node) const
+nodeTypeTranslate	Ckt.h	/^		int nodeTypeTranslate(cktNode* node) const;$/;"	p	class:Ckt	access:private	signature:(cktNode* node) const
+nullorList	GPDD.h	/^		list<Symbol*> nullorList;$/;"	m	class:GPDD	access:private
+numE	Ckt.h	/^		inline int numE() const {return numEdge;}$/;"	f	class:Ckt	access:public	signature:() const
+numEFH	GPDDNode.h	/^	int numEFH;				\/\/EFH number below this node$/;"	m	struct:GPDDNode	access:public
+numEdge	Ckt.h	/^		int numEdge;$/;"	m	class:Ckt	access:private
+numEdge	GPDD.h	/^		int numEdge;$/;"	m	class:GPDD	access:private
+numN	Ckt.h	/^		inline int numN() const {return numNode;} $/;"	f	class:Ckt	access:public	signature:() const
+numNode	Ckt.h	/^		int numNode;$/;"	m	class:Ckt	access:private
+numNode	GPDD.h	/^		int numNode;$/;"	m	class:GPDD	access:private
+numStep	Analysis.h	/^		int numStep;$/;"	m	class:Analysis	access:private
+numberNode	Ckt.cpp	/^void Ckt::numberNode() {$/;"	f	class:Ckt	signature:()
+numberNode	Ckt.h	/^		void numberNode(); $/;"	p	class:Ckt	access:private	signature:()
+onceAvgCalTime	GPDD.h	/^		long onceAvgCalTime;$/;"	m	class:GPDD	access:private
+out	Ckt.h	/^		bool out;	\/\/out appear$/;"	m	class:Ckt	access:private
+outFile	Analysis.h	/^		inline string outFile() {return outFileName;}$/;"	f	class:Analysis	access:public	signature:()
+outFileName	Analysis.h	/^		string outFileName;$/;"	m	class:Analysis	access:private
+pairEdge	Ckt.h	/^	cktEdge* pairEdge;$/;"	m	struct:cktEdge	access:public
+pairInOut	Ckt.h	/^		inline bool pairInOut() const {return src && out;}$/;"	f	class:Ckt	access:public	signature:() const
+parseAC	Ckt.cpp	/^void Ckt::parseAC(int type, int step, double s, double e) {$/;"	f	class:Ckt	signature:(int type, int step, double s, double e)
+parseAC	Ckt.h	/^		void parseAC(int type, int step, double s, double e);$/;"	p	class:Ckt	access:public	signature:(int type, int step, double s, double e)
+parseCCXS	Ckt.cpp	/^void Ckt::parseCCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v)
+parseCCXS	Ckt.h	/^		void parseCCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VName, double v)
+parseIsrc	Ckt.cpp	/^void Ckt::parseIsrc(const char* eleName, const char* nName1, const char* nName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+parseIsrc	Ckt.h	/^		void parseIsrc(const char* eleName, const char* nName1, const char* nName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+parseOutCC	Ckt.cpp	/^void Ckt::parseOutCC(const char* volName) {$/;"	f	class:Ckt	signature:(const char* volName)
+parseOutCC	Ckt.h	/^		void parseOutCC(const char* volName);$/;"	p	class:Ckt	access:public	signature:(const char* volName)
+parseOutVC	Ckt.cpp	/^void Ckt::parseOutVC(const char* nName1, const char* nName2) {$/;"	f	class:Ckt	signature:(const char* nName1, const char* nName2)
+parseOutVC	Ckt.h	/^		void parseOutVC(const char* nName1, const char* nName2);$/;"	p	class:Ckt	access:public	signature:(const char* nName1, const char* nName2)
+parseRLC	Ckt.cpp	/^void Ckt::parseRLC(const char* eleName, const char* nName1, const char*nName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* nName1, const char*nName2, double v)
+parseRLC	Ckt.h	/^		void parseRLC(const char* eleName, const char* nName1, const char* nName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+parseVCXS	Ckt.cpp	/^void Ckt::parseVCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v)
+parseVCXS	Ckt.h	/^		void parseVCXS(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* XSName1, const char* XSName2, const char* VCName1, const char* VCName2, double v)
+parseVsrc	Ckt.cpp	/^void Ckt::parseVsrc(const char* eleName, const char* nName1, const char* nName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+parseVsrc	Ckt.h	/^		void parseVsrc(const char* eleName, const char* nName1, const char* nName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
+pe	GPDD_struct.h	/^	Edge* pe;$/;"	m	struct:Symbol	access:public
+printACInf	Analysis.cpp	/^void Analysis::printACInf() const {$/;"	f	class:Analysis	signature:() const
+printACInf	Analysis.h	/^		void printACInf() const;$/;"	p	class:Analysis	access:public	signature:() const
+printCkt	Ckt.cpp	/^void Ckt::printCkt() const {$/;"	f	class:Ckt	signature:() const
+printCkt	Ckt.h	/^		void printCkt() const;$/;"	p	class:Ckt	access:public	signature:() const
+printConnection	GPDD.cpp	/^void GPDD::printConnection(const GPDDNode* curNode) const {$/;"	f	class:GPDD	signature:(const GPDDNode* curNode) const
+printConnection	GPDD.h	/^		void printConnection(const GPDDNode* curNode) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* curNode) const
+printGPDD	GPDD.cpp	/^void GPDD::printGPDD() const {$/;"	f	class:GPDD	signature:() const
+printGPDD	GPDD.h	/^		void printGPDD() const;$/;"	p	class:GPDD	access:public	signature:() const
+printGraph	Graph.cpp	/^void Graph::printGraph() const {$/;"	f	class:Graph	signature:() const
+printGraph	Graph.h	/^		void printGraph() const;$/;"	p	class:Graph	access:public	signature:() const
+printInit	GPDD.cpp	/^void GPDD::printInit() const {$/;"	f	class:GPDD	signature:() const
+printInit	GPDD.h	/^		void printInit() const;$/;"	p	class:GPDD	access:public	signature:() const
+printSymbol	GPDD.cpp	/^void GPDD::printSymbol() const {$/;"	f	class:GPDD	signature:() const
+printSymbol	GPDD.h	/^		void printSymbol() const;$/;"	p	class:GPDD	access:public	signature:() const
+reduceNode	GPDD.h	/^		long reduceNode[3];$/;"	m	class:GPDD	access:private
+reduceTime	GPDD.h	/^		long reduceTime;$/;"	m	class:GPDD	access:private
+reduction	GPDD.cpp	/^void GPDD::reduction() {$/;"	f	class:GPDD	signature:()
+reduction	GPDD.h	/^		void reduction();$/;"	p	class:GPDD	access:public	signature:()
+removeAllV	Ckt.cpp	/^void Ckt::removeAllV() {$/;"	f	class:Ckt	signature:()
+removeAllV	Ckt.h	/^		void removeAllV();$/;"	p	class:Ckt	access:private	signature:()
+rightG	GPDDNode.h	/^	Graph* rightG;$/;"	m	struct:GPDDNode	access:public
+set	Analysis.h	/^		bool set;$/;"	m	class:Analysis	access:private
+setOutFile	Analysis.cpp	/^void Analysis::setOutFile(const char* fname) {$/;"	f	class:Analysis	signature:(const char* fname)
+setOutFile	Analysis.h	/^		void setOutFile(const char* fname);$/;"	p	class:Analysis	access:public	signature:(const char* fname)
+shortNullor	Graph.cpp	/^void Graph::shortNullor() {$/;"	f	class:Graph	signature:()
+shortNullor	Graph.h	/^		void shortNullor();$/;"	p	class:Graph	access:public	signature:()
+src	Ckt.h	/^		bool src;	\/\/src appear$/;"	m	class:Ckt	access:private
+stepExpand	GPDD.h	/^		bool stepExpand;$/;"	m	class:GPDD	access:private
+stepExpandPrint	GPDD.cpp	/^void GPDD::stepExpandPrint(const GPDDNode* curNode) const {$/;"	f	class:GPDD	signature:(const GPDDNode* curNode) const
+stepExpandPrint	GPDD.h	/^		void stepExpandPrint(const GPDDNode* curNode) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* curNode) const
+sweep	Analysis.cpp	/^const vector<double>& Analysis::sweep() {$/;"	f	class:Analysis	signature:()
+sweep	Analysis.h	/^		const vector<double>& sweep();$/;"	p	class:Analysis	access:public	signature:()
+sym	GPDDNode.h	/^	Symbol* sym;$/;"	m	struct:GPDDNode	access:public
+sym	GPDD_struct.h	/^	Symbol *sym;$/;"	m	struct:Edge	access:public
+symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
+tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
+type	Ckt.h	/^	int type;$/;"	m	struct:cktEdge	access:public
+type	GPDD_struct.h	/^	int type;$/;"	m	struct:Edge	access:public
+updateSymbol	GPDD.cpp	/^void GPDD::updateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)
+updateSymbol	GPDD.h	/^		void updateSymbol(const double freq);$/;"	p	class:GPDD	access:private	signature:(const double freq)
+v	GPDD_struct.h	/^	double v;$/;"	m	struct:Symbol	access:public
+val	Ckt.h	/^	double val;$/;"	m	struct:cktEdge	access:public
+value	GPDDNode.h	/^	complex<double> value;$/;"	m	struct:GPDDNode	access:public
+value	GPDD_struct.h	/^	complex<double> value;$/;"	m	struct:Symbol	access:public
+vname	Ckt.h	/^	string vname;$/;"	m	struct:cktEdge	access:public
+wholeCalTime	GPDD.h	/^		long wholeCalTime;$/;"	m	class:GPDD	access:private
+~Analysis	Analysis.h	/^		~Analysis() {}$/;"	f	class:Analysis	access:public	signature:()
+~Ckt	Ckt.cpp	/^Ckt::~Ckt() {$/;"	f	class:Ckt	signature:()
+~Ckt	Ckt.h	/^		~Ckt();$/;"	p	class:Ckt	access:public	signature:()
+~GPDD	GPDD.cpp	/^GPDD::~GPDD() {$/;"	f	class:GPDD	signature:()
+~GPDD	GPDD.h	/^		~GPDD();$/;"	p	class:GPDD	access:public	signature:()
+~Graph	Graph.cpp	/^Graph::~Graph() {$/;"	f	class:Graph	signature:()
+~Graph	Graph.h	/^		~Graph();$/;"	p	class:Graph	access:public	signature:()
+~HashGPDDNode	HashGPDDNode.cpp	/^HashGPDDNode::~HashGPDDNode() {$/;"	f	class:HashGPDDNode	signature:()
+~HashGPDDNode	HashGPDDNode.h	/^		~HashGPDDNode();$/;"	p	class:HashGPDDNode	access:public	signature:()
+~HashGraph	HashGraph.cpp	/^HashGraph::~HashGraph() {$/;"	f	class:HashGraph	signature:()
+~HashGraph	HashGraph.h	/^		~HashGraph();$/;"	p	class:HashGraph	access:public	signature:()
+~HashReduction	HashReduction.cpp	/^HashReduction::~HashReduction() {$/;"	f	class:HashReduction	signature:()
+~HashReduction	HashReduction.h	/^		~HashReduction();$/;"	p	class:HashReduction	access:public	signature:()
+~Symbol	GPDD_struct.h	/^	~Symbol() {delete e; delete pe;}$/;"	f	struct:Symbol	access:public	signature:()

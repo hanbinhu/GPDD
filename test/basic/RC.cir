@@ -1,0 +1,10 @@
+*RC Circuit
+
+C1 in out 10k
+R1 out 0 1p
+
+V1 in 0 1
+
+.ac out 0 DEC 1 100 1G
+
+.end

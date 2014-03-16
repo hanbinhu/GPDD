@@ -1,0 +1,10 @@
+*G element test
+
+G1 1 2 1 2 0.01
+
+vin 1 0 1
+
+vtest 2 0 0
+
+.ac vtest dec 1 1 100Meg
+.end

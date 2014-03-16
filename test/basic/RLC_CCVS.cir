@@ -1,0 +1,13 @@
+*RLC_CCVS Circuit
+
+R1 in mid1 10k
+C1 mid1 mid2 1p
+L1 mid2 out 1n
+
+V1 in 0 1
+
+Vx out 0 0
+
+.ac Vx DEC 1 100 100G
+
+.end

@@ -1,0 +1,15 @@
+*MOS amplifier
+
+
+gm d 0 g 0 600u
+Cgd g d 1f
+Cds d 0 4f
+rds d 0 500k
+
+cL d 0 20f
+
+V1 g 0 1
+
+.ac d 0 DEC 1 100 1G
+
+.end

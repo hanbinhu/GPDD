@@ -1,0 +1,22 @@
+* yin06.cir	-- 6 SOP terms
+* A circuit example from Yin's Chinese paper.
+R1 1 5 1k
+G2 0 4 0 4 1m
+
+G3 3 4 3 4 10m
+
+R4 1 0 3k
+E5 2 4 1 0 5
+
+V8 5 2 0  
+
+F6 2 3 V8 2
+
+IIN 0 1 1
+
+.ac 3 4 dec 2 1 10G
+
+.end
+
+
+

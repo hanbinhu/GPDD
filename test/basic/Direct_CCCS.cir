@@ -1,0 +1,9 @@
+*Direct CCCS input and output
+
+I1 in 0 1
+
+V1 in 0 0
+
+.ac V1 DEC 1 100 1G
+
+.end

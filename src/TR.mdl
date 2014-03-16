@@ -1,0 +1,588 @@
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/ua741.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	763usec.
+GPDD Class Initialization:	301usec.
+GPDD Class Expandsion Process:	16889551usec.
+GPDD Class Reduction Process:	127060usec.
+
+Average GPDD Calculation:	10008usec.
+Whole GPDD Calculation:  	730655usec.
+
+The Total Time Cosuming:	17748330usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	38388
+Hit Time of Graph Before Reduction:	362286
+Crash Time of Graph Before Reduction:	29632
+The Number of GPDDNode Before Redction:	134965
+Hit Time of GPDDNode Before Reduction:	65372
+Crash Time of GPDDNode Before Redction:	2260
+
+The Number of GPDDNode After Reduction:	27110
+Hit Time of GPDDNode After Reduction:	33676
+Crash Time of GPDDNode After Reduction:	7957
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/yin06.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	23usec.
+GPDD Class Initialization:	78usec.
+GPDD Class Expandsion Process:	667usec.
+GPDD Class Reduction Process:	25usec.
+
+Average GPDD Calculation:	8usec.
+Whole GPDD Calculation:  	169usec.
+
+The Total Time Cosuming:	962usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	51
+Hit Time of Graph Before Reduction:	21
+Crash Time of Graph Before Reduction:	13
+The Number of GPDDNode Before Redction:	35
+Hit Time of GPDDNode Before Reduction:	1
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	12
+Hit Time of GPDDNode After Reduction:	3
+Crash Time of GPDDNode After Reduction:	1
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/yin37.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	24usec.
+GPDD Class Initialization:	80usec.
+GPDD Class Expandsion Process:	2098usec.
+GPDD Class Reduction Process:	63usec.
+
+Average GPDD Calculation:	15usec.
+Whole GPDD Calculation:  	228usec.
+
+The Total Time Cosuming:	2493usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	101
+Hit Time of Graph Before Reduction:	151
+Crash Time of Graph Before Reduction:	47
+The Number of GPDDNode Before Redction:	96
+Hit Time of GPDDNode Before Reduction:	30
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	36
+Hit Time of GPDDNode After Reduction:	25
+Crash Time of GPDDNode After Reduction:	5
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/RC.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	17usec.
+GPDD Class Initialization:	73usec.
+GPDD Class Expandsion Process:	69usec.
+GPDD Class Reduction Process:	10usec.
+
+Average GPDD Calculation:	7usec.
+Whole GPDD Calculation:  	56usec.
+
+The Total Time Cosuming:	225usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	5
+Hit Time of Graph Before Reduction:	3
+Crash Time of Graph Before Reduction:	0
+The Number of GPDDNode Before Redction:	4
+Hit Time of GPDDNode Before Reduction:	0
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	4
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	1
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/uniMOS.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	18usec.
+GPDD Class Initialization:	75usec.
+GPDD Class Expandsion Process:	101usec.
+GPDD Class Reduction Process:	12usec.
+
+Average GPDD Calculation:	7usec.
+Whole GPDD Calculation:  	58usec.
+
+The Total Time Cosuming:	264usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	7
+Hit Time of Graph Before Reduction:	5
+Crash Time of Graph Before Reduction:	0
+The Number of GPDDNode Before Redction:	6
+Hit Time of GPDDNode Before Reduction:	0
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	5
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	1
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/Intergrator.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	17usec.
+GPDD Class Initialization:	76usec.
+GPDD Class Expandsion Process:	68usec.
+GPDD Class Reduction Process:	11usec.
+
+Average GPDD Calculation:	6usec.
+Whole GPDD Calculation:  	54usec.
+
+The Total Time Cosuming:	226usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	6
+Hit Time of Graph Before Reduction:	2
+Crash Time of Graph Before Reduction:	1
+The Number of GPDDNode Before Redction:	4
+Hit Time of GPDDNode Before Reduction:	0
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	3
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	1
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/RLC_CCVS.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	23usec.
+GPDD Class Initialization:	95usec.
+GPDD Class Expandsion Process:	180usec.
+GPDD Class Reduction Process:	17usec.
+
+Average GPDD Calculation:	8usec.
+Whole GPDD Calculation:  	86usec.
+
+The Total Time Cosuming:	401usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	9
+Hit Time of Graph Before Reduction:	9
+Crash Time of Graph Before Reduction:	3
+The Number of GPDDNode Before Redction:	8
+Hit Time of GPDDNode Before Reduction:	1
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	6
+Hit Time of GPDDNode After Reduction:	2
+Crash Time of GPDDNode After Reduction:	0
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/Direct_CCCS.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	18usec.
+GPDD Class Initialization:	85usec.
+GPDD Class Expandsion Process:	26usec.
+GPDD Class Reduction Process:	9usec.
+
+Average GPDD Calculation:	6usec.
+Whole GPDD Calculation:  	55usec.
+
+The Total Time Cosuming:	193usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	2
+Hit Time of Graph Before Reduction:	0
+Crash Time of Graph Before Reduction:	0
+The Number of GPDDNode Before Redction:	1
+Hit Time of GPDDNode Before Reduction:	0
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	1
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	0
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/RLC.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	21usec.
+GPDD Class Initialization:	89usec.
+GPDD Class Expandsion Process:	156usec.
+GPDD Class Reduction Process:	17usec.
+
+Average GPDD Calculation:	9usec.
+Whole GPDD Calculation:  	93usec.
+
+The Total Time Cosuming:	376usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	8
+Hit Time of Graph Before Reduction:	8
+Crash Time of Graph Before Reduction:	0
+The Number of GPDDNode Before Redction:	7
+Hit Time of GPDDNode Before Reduction:	1
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	7
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	1
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/Direct_VCVS.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	20usec.
+GPDD Class Initialization:	89usec.
+GPDD Class Expandsion Process:	27usec.
+GPDD Class Reduction Process:	9usec.
+
+Average GPDD Calculation:	7usec.
+Whole GPDD Calculation:  	59usec.
+
+The Total Time Cosuming:	204usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	2
+Hit Time of Graph Before Reduction:	0
+Crash Time of Graph Before Reduction:	0
+The Number of GPDDNode Before Redction:	1
+Hit Time of GPDDNode Before Reduction:	0
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	1
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	0
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/ua725_ok.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	525usec.
+GPDD Class Initialization:	189usec.
+GPDD Class Expandsion Process:	8220304usec.
+GPDD Class Reduction Process:	58472usec.
+
+Average GPDD Calculation:	5543usec.
+Whole GPDD Calculation:  	315968usec.
+
+The Total Time Cosuming:	8595458usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	18733
+Hit Time of Graph Before Reduction:	163903
+Crash Time of Graph Before Reduction:	15533
+The Number of GPDDNode Before Redction:	62486
+Hit Time of GPDDNode Before Reduction:	28832
+Crash Time of GPDDNode Before Redction:	548
+
+The Number of GPDDNode After Reduction:	14371
+Hit Time of GPDDNode After Reduction:	17895
+Crash Time of GPDDNode After Reduction:	2552
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/bp_4stage.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	113usec.
+GPDD Class Initialization:	118usec.
+GPDD Class Expandsion Process:	95567usec.
+GPDD Class Reduction Process:	827usec.
+
+Average GPDD Calculation:	70usec.
+Whole GPDD Calculation:  	1062usec.
+
+The Total Time Cosuming:	97687usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	1345
+Hit Time of Graph Before Reduction:	2247
+Crash Time of Graph Before Reduction:	599
+The Number of GPDDNode Before Redction:	1398
+Hit Time of GPDDNode Before Reduction:	398
+Crash Time of GPDDNode Before Redction:	2
+
+The Number of GPDDNode After Reduction:	222
+Hit Time of GPDDNode After Reduction:	83
+Crash Time of GPDDNode After Reduction:	1
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/Real_Intergrator.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	21usec.
+GPDD Class Initialization:	88usec.
+GPDD Class Expandsion Process:	177usec.
+GPDD Class Reduction Process:	16usec.
+
+Average GPDD Calculation:	9usec.
+Whole GPDD Calculation:  	74usec.
+
+The Total Time Cosuming:	376usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	12
+Hit Time of Graph Before Reduction:	6
+Crash Time of Graph Before Reduction:	3
+The Number of GPDDNode Before Redction:	9
+Hit Time of GPDDNode Before Reduction:	0
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	6
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	0
+Start Parsing...
+Parsing Complete.
+NetList Simple Checking...
+Netlist Checking Complete.
+Start GPDD Construction from Circuit
+GPDD Construction Complete.
+GPDD Initialzation Start...
+GPDDRoot Initialization...
+GPDDZero & GPDDOne Initialization
+GPDD Initialization Complete.
+GPDD Expansion Start...
+GPDD Expansion Complete.
+GPDD Reduction Start...
+GPDD Reduction Complete.
+Frequency Calculation Start...
+All Result are written into /home/hhb/GPDD_hhb/test/basic/G2R.out.
+
+GPDD Information:
+Time Analysis:
+Circuit Class to GPDD Class:	20usec.
+GPDD Class Initialization:	90usec.
+GPDD Class Expandsion Process:	49usec.
+GPDD Class Reduction Process:	11usec.
+
+Average GPDD Calculation:	7usec.
+Whole GPDD Calculation:  	66usec.
+
+The Total Time Cosuming:	236usec.
+
+Memory Analysis:
+The Number of Graph Before Reduction:	3
+Hit Time of Graph Before Reduction:	1
+Crash Time of Graph Before Reduction:	1
+The Number of GPDDNode Before Redction:	2
+Hit Time of GPDDNode Before Reduction:	0
+Crash Time of GPDDNode Before Redction:	0
+
+The Number of GPDDNode After Reduction:	2
+Hit Time of GPDDNode After Reduction:	0
+Crash Time of GPDDNode After Reduction:	0
+Comparing bp_4stage.out...
+Files bp_4stage.out and ../answer/bp_4stage.out are identical
+Comparing Direct_CCCS.out...
+Files Direct_CCCS.out and ../answer/Direct_CCCS.out are identical
+Comparing Direct_VCVS.out...
+Files Direct_VCVS.out and ../answer/Direct_VCVS.out are identical
+Comparing G2R.out...
+Files G2R.out and ../answer/G2R.out are identical
+Comparing Intergrator.out...
+Files Intergrator.out and ../answer/Intergrator.out are identical
+Comparing RC.out...
+Files RC.out and ../answer/RC.out are identical
+Comparing Real_Intergrator.out...
+Files Real_Intergrator.out and ../answer/Real_Intergrator.out are identical
+Comparing RLC_CCVS.out...
+Files RLC_CCVS.out and ../answer/RLC_CCVS.out are identical
+Comparing RLC.out...
+Files RLC.out and ../answer/RLC.out are identical
+Comparing ua725_ok.out...
+Files ua725_ok.out and ../answer/ua725_ok.out are identical
+Comparing ua741.out...
+Files ua741.out and ../answer/ua741.out are identical
+Comparing uniMOS.out...
+Files uniMOS.out and ../answer/uniMOS.out are identical
+Comparing yin06.out...
+Files yin06.out and ../answer/yin06.out are identical
+Comparing yin37.out...
+Files yin37.out and ../answer/yin37.out are identical

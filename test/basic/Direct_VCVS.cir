@@ -1,0 +1,9 @@
+*Direct VCVS input and output
+
+R1 in 0 1Meg
+
+V1 in 0 1
+
+.ac in 0 DEC 1 100 1G
+
+.end

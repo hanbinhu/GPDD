@@ -1,0 +1,23 @@
+* yin37.sp
+* A circuit with 37 terms from Yin's paper.
+R3 1 4 100
+
+G0 1 2 1 2 1
+E5 2 3 2 7 1
+F6 3 6 V10 500m
+
+G1 7 6 7 6 1m
+V10 0 7 0
+
+R2 6 5 1
+V11 3 4 0
+
+H7 5 0 V11 10
+
+Iin 0 1 1
+
+R4 4 5 1
+
+.AC 4 5 dec 2 1 10meg
+
+.end
