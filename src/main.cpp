@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 			myGPDD->expand();
 			myGPDD->reduction();
 			myGPDD->Calculation();
+			myGPDD->TermCount();
 			myGPDD->AnalysisPrint();
 			delete myGPDD;
 			delete myCkt;
@@ -47,6 +48,10 @@ int main(int argc, char *argv[])
 			if(flag) myGPDD->printGPDD();
 
 			myGPDD->Calculation();
+
+			cout << "Calculate terms of GPDD or Not?[y/n]";
+			flag = input_bool();
+			if(flag) myGPDD->TermCount();
 
 			myGPDD->AnalysisPrint();
 

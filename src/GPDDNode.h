@@ -17,6 +17,7 @@ struct GPDDNode {
 	bool inSign, exSign;	//true for 1, false for -1
 	bool mark;				//For tranverse
 	complex<double> value;
+	long long termNum;
 	
 	//For Reduction
 	GPDDNode* RNode;
@@ -26,7 +27,7 @@ struct GPDDNode {
 
 	GPDDNode():
 		sym(NULL), leftG(NULL), rightG(NULL), inNode(NULL), exNode(NULL),
-		numEFH(0), inSign(true), exSign(true), mark(false), value(complex<double>(0,0)),
+		numEFH(0), inSign(true), exSign(true), mark(false), value(complex<double>(0,0)), termNum(0),
 		alterS(false), RNode(NULL), NF(0), ZS(false){}
 };
 

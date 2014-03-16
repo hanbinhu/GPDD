@@ -24,7 +24,7 @@ GPDD::GPDD(const Ckt* myCkt) {
 	inited = false;
 	expanded = false;
 	caled = false;
-
+	termCounted = false;
 	int n = 0;
 
 	const list<cktEdge*>& eList = myCkt->eList();
@@ -167,7 +167,7 @@ void GPDD::init() {
 
 	GPDDOne = new GPDDNode; 
 	GPDDOne->mark = true; GPDDOne->value = complex<double>(1, 0);
-	GPDDOne->RNode = GPDDOne;  
+	GPDDOne->RNode = GPDDOne; GPDDOne->termNum = 1; 
 
 	inited = true;
 
@@ -633,6 +633,40 @@ void GPDD::updateSymbol(const double freq) {
 	}
 }
 
+void GPDD::TermCount() {
+	if(termCounted) return;
+
+	nTermNum = 1;
+	nTermDen = 1;
+
+	stack<GPDDNode*> s;
+	bool tmpMark = GPDDRoot->mark;
+	if(GPDDRoot->exNode != GPDDOne && GPDDRoot->exNode != GPDDZero) 
+		s.push(GPDDRoot->exNode);
+	if(GPDDRoot->inNode != GPDDOne && GPDDRoot->inNode != GPDDZero) 
+		s.push(GPDDRoot->inNode);
+	while(!s.empty()) {
+		GPDDNode* curNode = s.top();
+		if(curNode->inNode->mark == tmpMark) s.push(curNode->inNode);
+		else if(curNode->exNode->mark == tmpMark) s.push(curNode->exNode);
+		else {
+			curNode->mark = !tmpMark;
+			curNode->termNum = curNode->inNode->termNum + curNode->exNode->termNum;
+			s.pop();
+		}
+	}
+	GPDDRoot->mark = !tmpMark;
+	GPDDZero->mark = tmpMark;
+	GPDDOne->mark = tmpMark;
+	
+	if(GPDDRoot->inNode != GPDDOne && GPDDRoot->inNode != GPDDZero) 
+		nTermNum = GPDDRoot->inNode->termNum;
+	if(GPDDRoot->exNode != GPDDOne && GPDDRoot->exNode != GPDDZero)
+		nTermDen = GPDDRoot->exNode->termNum;
+
+	termCounted = true;
+}
+
 complex<double> GPDD::Evaluate() const {
 	stack<GPDDNode*> s;
 	bool tmpMark = GPDDRoot->mark;
@@ -739,6 +773,13 @@ void GPDD::AnalysisPrint() const {
 		cout << "The Number of GPDDNode After Reduction:\t" << reduceNode[0] << endl;
 		cout << "Hit Time of GPDDNode After Reduction:\t" << reduceNode[1] << endl;
 		cout << "Crash Time of GPDDNode After Reduction:\t" << reduceNode[2] << endl;
+	}
+
+	if(termCounted) {
+		cout << endl << "Term Analysis:" << endl;
+		cout << setiosflags(ios::scientific) << setprecision(5);
+		cout << "# of terms on numerator:\t" << double(nTermNum) << endl;
+		cout << "# of terms on denominator:\t" << double(nTermDen) << endl;
 	}
 }
 

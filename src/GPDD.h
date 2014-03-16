@@ -43,6 +43,8 @@ class GPDD {
 
 		bool stepExpand;
 
+		bool termCounted;
+
 		//Time Record
 		long cirTime;
 		long initTime;
@@ -62,6 +64,10 @@ class GPDD {
 		long graphNode[3];
 		long expandNode[3];
 		long reduceNode[3];
+
+		//Term Count Information
+		long long nTermNum;
+		long long nTermDen;
 
 		//Const
 		const static double PI = 3.14159265358979323846264338327950288;
@@ -90,6 +96,7 @@ class GPDD {
 
 		//Evaluation
 		void Calculation();
+		void TermCount();
 
 		//For print
 		void printSymbol() const;
