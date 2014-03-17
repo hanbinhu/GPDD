@@ -156,6 +156,8 @@ GPDD::Include	GPDD.h	/^		pair<GPDDNode*, bool> Include(const GPDDNode* fNode);$/
 GPDD::PI	GPDD.h	/^		const static double PI = 3.14159265358979323846264338327950288;$/;"	m	class:GPDD	access:private
 GPDD::ReductionHash	GPDD.h	/^		HashReduction ReductionHash;$/;"	m	class:GPDD	access:private
 GPDD::TIME_UNIT	GPDD.h	/^		const static long TIME_UNIT = 1000000;$/;"	m	class:GPDD	access:private
+GPDD::TermCount	GPDD.cpp	/^void GPDD::TermCount() {$/;"	f	class:GPDD	signature:()
+GPDD::TermCount	GPDD.h	/^		void TermCount();$/;"	p	class:GPDD	access:public	signature:()
 GPDD::anaAC	GPDD.h	/^		Analysis *anaAC;$/;"	m	class:GPDD	access:private
 GPDD::caled	GPDD.h	/^		bool caled;$/;"	m	class:GPDD	access:private
 GPDD::cirTime	GPDD.h	/^		long cirTime;$/;"	m	class:GPDD	access:private
@@ -171,6 +173,8 @@ GPDD::init	GPDD.h	/^		void init();$/;"	p	class:GPDD	access:public	signature:()
 GPDD::initTime	GPDD.h	/^		long initTime;$/;"	m	class:GPDD	access:private
 GPDD::inited	GPDD.h	/^		bool inited;$/;"	m	class:GPDD	access:private
 GPDD::maxEFH	GPDD.h	/^		int maxEFH;$/;"	m	class:GPDD	access:private
+GPDD::nTermDen	GPDD.h	/^		long long nTermDen;$/;"	m	class:GPDD	access:private
+GPDD::nTermNum	GPDD.h	/^		long long nTermNum;$/;"	m	class:GPDD	access:private
 GPDD::nullorList	GPDD.h	/^		list<Symbol*> nullorList;$/;"	m	class:GPDD	access:private
 GPDD::numEdge	GPDD.h	/^		int numEdge;$/;"	m	class:GPDD	access:private
 GPDD::numNode	GPDD.h	/^		int numNode;$/;"	m	class:GPDD	access:private
@@ -192,6 +196,7 @@ GPDD::stepExpandPrint	GPDD.cpp	/^void GPDD::stepExpandPrint(const GPDDNode* curN
 GPDD::stepExpandPrint	GPDD.h	/^		void stepExpandPrint(const GPDDNode* curNode) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* curNode) const
 GPDD::symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
 GPDD::tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
+GPDD::termCounted	GPDD.h	/^		bool termCounted;$/;"	m	class:GPDD	access:private
 GPDD::updateSymbol	GPDD.cpp	/^void GPDD::updateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)
 GPDD::updateSymbol	GPDD.h	/^		void updateSymbol(const double freq);$/;"	p	class:GPDD	access:private	signature:(const double freq)
 GPDD::wholeCalTime	GPDD.h	/^		long wholeCalTime;$/;"	m	class:GPDD	access:private
@@ -214,6 +219,7 @@ GPDDNode::mark	GPDDNode.h	/^	bool mark;				\/\/For tranverse$/;"	m	struct:GPDDNo
 GPDDNode::numEFH	GPDDNode.h	/^	int numEFH;				\/\/EFH number below this node$/;"	m	struct:GPDDNode	access:public
 GPDDNode::rightG	GPDDNode.h	/^	Graph* rightG;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::sym	GPDDNode.h	/^	Symbol* sym;$/;"	m	struct:GPDDNode	access:public
+GPDDNode::termNum	GPDDNode.h	/^	long long termNum;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::value	GPDDNode.h	/^	complex<double> value;$/;"	m	struct:GPDDNode	access:public
 GPDDNodeHash	GPDD.h	/^		HashGPDDNode GPDDNodeHash;$/;"	m	class:GPDD	access:private
 GPDDOne	GPDD.h	/^		GPDDNode* GPDDOne;$/;"	m	class:GPDD	access:private
@@ -401,6 +407,8 @@ Symbol::value	GPDD_struct.h	/^	complex<double> value;$/;"	m	struct:Symbol	access
 Symbol::~Symbol	GPDD_struct.h	/^	~Symbol() {delete e; delete pe;}$/;"	f	struct:Symbol	access:public	signature:()
 TARGET	Makefile	/^TARGET = GPDD$/;"	m
 TIME_UNIT	GPDD.h	/^		const static long TIME_UNIT = 1000000;$/;"	m	class:GPDD	access:private
+TermCount	GPDD.cpp	/^void GPDD::TermCount() {$/;"	f	class:GPDD	signature:()
+TermCount	GPDD.h	/^		void TermCount();$/;"	p	class:GPDD	access:public	signature:()
 TimesOfCrash	HashGPDDNode.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashGPDDNode	access:public	signature:() const
 TimesOfCrash	HashGraph.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashGraph	access:public	signature:() const
 TimesOfCrash	HashReduction.h	/^		inline int TimesOfCrash() const {return crashTime;}$/;"	f	class:HashReduction	access:public	signature:() const
@@ -504,6 +512,8 @@ maxEFH	GPDD.h	/^		int maxEFH;$/;"	m	class:GPDD	access:private
 nEdge	Graph.h	/^		int nEdge;$/;"	m	class:Graph	access:public
 nEffectiveEdge	Graph.h	/^		int nEffectiveEdge;$/;"	m	class:Graph	access:public
 nNode	Graph.h	/^		int nNode;$/;"	m	class:Graph	access:public
+nTermDen	GPDD.h	/^		long long nTermDen;$/;"	m	class:GPDD	access:private
+nTermNum	GPDD.h	/^		long long nTermNum;$/;"	m	class:GPDD	access:private
 name	Ckt.h	/^	string name;$/;"	m	struct:cktEdge	access:public
 name	Ckt.h	/^	string name;$/;"	m	struct:cktNode	access:public
 name	GPDD_struct.h	/^	string name;$/;"	m	struct:Symbol	access:public
@@ -590,6 +600,8 @@ sym	GPDDNode.h	/^	Symbol* sym;$/;"	m	struct:GPDDNode	access:public
 sym	GPDD_struct.h	/^	Symbol *sym;$/;"	m	struct:Edge	access:public
 symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
 tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
+termCounted	GPDD.h	/^		bool termCounted;$/;"	m	class:GPDD	access:private
+termNum	GPDDNode.h	/^	long long termNum;$/;"	m	struct:GPDDNode	access:public
 type	Ckt.h	/^	int type;$/;"	m	struct:cktEdge	access:public
 type	GPDD_struct.h	/^	int type;$/;"	m	struct:Edge	access:public
 updateSymbol	GPDD.cpp	/^void GPDD::updateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)
