@@ -41,7 +41,10 @@ GPDD::GPDD(const Ckt* myCkt) {
 						 tmpSym->v = (*it)->val;
 						 tmpSym->value = complex<double>(tmpSym->v, 0);
 						 tmpSym->e = e1; tmpSym->pe = e2;
-						 tmpSym->lumpedNext = NULL; 
+						 tmpSym->lumpedNext = NULL;
+						 tmpSym->rd = false; tmpSym->so = false;
+						 tmpSym->rdEval = false; tmpSym->soEval = false;
+						 tmpSym->shortSym = NULL; tmpSym->shortSymShort = NULL;
 
 						 e1->node1 = (*it)->node1->index;
 						 e1->node2 = (*it)->node2->index;
@@ -64,6 +67,10 @@ GPDD::GPDD(const Ckt* myCkt) {
 						 tmpSym->v = (*it)->val;
 						 tmpSym->value = complex<double>(tmpSym->v, 0);
 						 tmpSym->e = e; tmpSym->pe = NULL;
+						 
+						 tmpSym->rd = false; tmpSym->so = false;
+						 tmpSym->rdEval = false; tmpSym->soEval = false;
+						 tmpSym->shortSym = NULL; tmpSym->shortSymShort = NULL;
 
 						 e->node1 = (*it)->node1->index;
 						 e->node2 = (*it)->node2->index;
@@ -596,6 +603,7 @@ void GPDD::Calculation() {
 		res = Evaluate();
 		double mag = abs(res);
 		double phase = arg(res) / PI * 180;
+		magList.push_back(20 * log(mag) / log(10)); phaseList.push_back(phase);
 		gettimeofday(&finish, NULL);
 		CalTime += TIME_UNIT * (finish.tv_sec - start.tv_sec) + finish.tv_usec - start.tv_usec;
 		out << setw(20) << freq << setw(20) << mag << setw(20) << phase << endl;
@@ -694,6 +702,354 @@ complex<double> GPDD::Evaluate() const {
 	if(GPDDRoot->inSign^GPDDRoot->exSign) final *= -1;
 	final *= GPDDRoot->inNode->value / GPDDRoot->exNode->value;
 	return final;
+}
+
+void GPDD::delPreProcess() {
+	list<Symbol*>::iterator it = symbolList.begin();
+	while(it != symbolList.end()) {
+		if((*it)->e->type == YZ) {
+			bool f = false;
+			Symbol* p = *it;
+			while(p) {
+				if(p->rd && !p->so) break;
+				if(!p->rd) f = true;
+				p = p->lumpedNext;
+			}
+			if(p) {(*it)->rdEval = true; (*it)->soEval = false;} 
+			else if (f) {(*it)->rdEval = false; (*it)->soEval = false;}
+			else {(*it)->rdEval = true; (*it)->soEval = true;}
+		} else {
+			(*it)->rdEval = (*it)->rd;
+			(*it)->soEval = (*it)->so;
+		}
+		++it;
+	}
+					
+	list<Symbol*>::reverse_iterator itr = symbolList.rbegin();
+	Symbol* tmp = NULL;
+	while(itr != symbolList.rend()) {
+		(*itr)->shortSymShort = tmp;
+		if((*itr)->rdEval && !(*itr)->soEval) tmp = *itr;
+		(*itr)->shortSym = tmp;
+		itr++;
+	}
+}
+
+void GPDD::delUpdateSymbol(const double freq) {
+	list<Symbol*>::iterator it = symbolList.begin();
+	while(it != symbolList.end()) {
+		if((*it)->rdEval) {
+			(*it)->value = complex<double>(0, 0);
+			++it;
+			continue;
+		}
+		if((*it)->e->type == YZ) {
+			complex<double> tmp(0, 0);
+			Symbol* p = *it;
+			while(p) {
+				if(p->rd) {p = p->lumpedNext; continue;}
+				switch (p->name[0]) {
+					case 'R': p->value = complex<double>(p->v, 0); break;
+					case 'C': p->value = complex<double>(0, 2 * PI * freq * p->v);	break;
+					case 'L': p->value = complex<double>(0, p->v / 2 / PI / freq);	break;
+					default: break;
+				}
+				tmp += p->value;
+				p = p->lumpedNext;
+			}
+			(*it)->value = tmp;
+		} else (*it)->value = complex<double>((*it)->v, 0);
+		++it;
+	}
+}
+
+complex<double> GPDD::EvaluatePC(const GPDDNode* p, const GPDDNode* c) const {
+	Symbol* ps = p->sym;
+	Symbol* psS = ps->shortSym;
+
+	if(c == GPDDOne || c == GPDDZero) {
+		if(!ps->shortSymShort)
+			return c->value;
+		else return complex<double>(0, 0);
+	}
+
+	Symbol* cs = c->sym;
+	Symbol* csS = cs->shortSym;
+
+	complex<double> tmp;
+	if((psS != csS && ps != psS) ||
+	   (ps == psS && ps->shortSymShort != csS)) return complex<double>(0, 0);
+	else if(cs == csS) {								
+		tmp = c->lValue;
+		if(!c->inSign) tmp *= -1;
+		return tmp;
+	} else {
+		tmp = cs->value * c->lValue;
+		if(!c->inSign) tmp *= -1;
+		if(c->exSign) tmp += c->rValue;
+		else tmp -= c->rValue;
+		return tmp;
+	}
+}
+
+complex<double> GPDD::delEvaluate() const {
+	stack<GPDDNode*> s;
+	s.push(GPDDRoot);
+	
+	bool tmpMark = GPDDRoot->mark;
+	GPDDZero->mark = !tmpMark;
+	GPDDOne->mark = !tmpMark;
+	
+	while(!s.empty()) {
+		GPDDNode* curNode = s.top();
+		GPDDNode* lNode = curNode->inNode;
+		GPDDNode* rNode = curNode->exNode;
+		if(lNode->mark == tmpMark) s.push(lNode);
+		else if(rNode->mark == tmpMark) s.push(rNode);
+		else {
+			curNode->mark = !tmpMark;
+			curNode->lValue = EvaluatePC(curNode, lNode);
+			curNode->rValue = EvaluatePC(curNode, rNode);
+			s.pop();
+		}
+	}
+	
+	GPDDRoot->mark = !tmpMark;
+	GPDDZero->mark = tmpMark;
+	GPDDOne->mark = tmpMark;
+	complex<double> final = -1;
+	if(GPDDRoot->inSign ^ GPDDRoot->exSign) final *= -1;
+	final *= GPDDRoot->lValue / GPDDRoot->rValue;
+	return final;
+}
+
+pair<double, double> GPDD::delCalculation(bool fout, const string& filename) {
+	if(!expanded) {
+		cerr << "GPDD has not been expanded." << endl;
+		exit(1);
+	}
+
+	if(!caled) {
+		cerr << "No Original Results." << endl;
+		exit(1);
+	}
+	
+	if(!anaAC->isSet()) {
+		cout << "AC Analysis haven't been setted." << endl;
+		exit(1);
+	}
+	
+	vector<double> magTest, phaseTest;
+
+	delPreProcess();
+	complex<double> res;
+	const vector<double>& allFreq = anaAC->sweep();
+	vector<double>::const_iterator it = allFreq.begin();
+	while(it != allFreq.end()) {
+		double freq = *it;
+		delUpdateSymbol(freq);
+		res = delEvaluate();
+		double mag = abs(res);
+		double phase = arg(res) / PI * 180;
+		magTest.push_back(20 * log(mag) / log(10));
+		phaseTest.push_back(phase);
+		++it;
+	}
+	
+	if(fout) {
+		string outFile = anaAC->outFile() + '_' + filename;
+
+		ofstream out;
+		out.open(outFile.c_str());
+		if(!out) {
+			cerr << "Cannot Open OutFile." << endl;
+			exit(1);
+		}
+		out.setf(ios::scientific | ios::left);
+		out.precision(8);
+		for(int i = 0; i < allFreq.size(); i++) {
+			out << setw(20) << allFreq[i] << setw(20) << magTest[i] << setw(20) << phaseTest[i] << endl;
+		}
+		out.close();
+	}
+	double magError = errorAssess(magList, magTest, 40);
+	double phaseError = errorAssess(phaseList, phaseTest, 40);
+	return pair<double, double>(magError, phaseError);
+}
+
+double GPDD::errorAssess(const vector<double>& ori, const vector<double>& test, int pos) {
+	return (abs(ori[pos] - test[pos]) / ori[pos]);
+}
+
+double GPDD::errorAssess(const vector<double>& ori, const vector<double>& test) {
+	if(ori.size() != test.size()) return -1;
+
+	double res = 0;
+	vector<double> error;
+	vector<double>::const_iterator itOri = ori.begin();
+	vector<double>::const_iterator itTest = test.begin();
+	while(itOri != ori.end()) {
+		double dataOri = *itOri, dataTest = *itTest;
+		error.push_back(dataTest - dataOri);
+		itOri++; itTest++;
+	}
+
+	double firMoment = 0, secMoment = 0;
+	int N = error.size();
+	vector<double>::const_iterator it = error.begin();
+	while(it != error.end()) {
+		firMoment += *it;
+		secMoment += (*it) * (*it);
+		it++;
+	}
+	double mean = firMoment / N;
+	double var = secMoment / N - mean * mean;
+	double stdVar = sqrt(var);
+	return abs(stdVar / mean);
+}
+
+double GPDD::errorMagPhase(double mag, double phase) {
+//			return phase * phase;
+//			return mag * mag;
+			return mag * mag + phase * phase;
+}
+
+void GPDD::symbolAssess(Symbol* curSym) {
+	curSym->rd = true;
+
+	//Open Case
+	curSym->so = true; bool oflag = true;
+	pair<double, double> openError = delCalculation();
+	double omag = openError.first, ophase = openError.second;
+	if(isinf(omag) || isnan(omag)) oflag = false;
+	if(isinf(ophase) || isnan(ophase)) oflag = false;
+
+	//Short Case
+	curSym->so = false; bool sflag = true;
+	pair<double, double> shortError = delCalculation();
+	double smag = shortError.first, sphase = shortError.second;
+	if(isinf(smag) || isnan(smag)) sflag = false;
+	if(isinf(sphase) || isnan(sphase)) sflag = false;
+
+	int delMethod; // 0: keep 1:short 2:open
+	if(!oflag && !sflag) delMethod = 0;
+	else if (!oflag && sflag) delMethod = 1;
+	else if (oflag && !sflag) delMethod = 2;
+	else {
+		double odis = errorMagPhase(omag, ophase);
+		double sdis = errorMagPhase(smag, sphase);
+		delMethod = (sdis < odis) ? 1 : 2;
+	}
+
+	string outStat = "Keep";
+	if(delMethod == 1) outStat = "Short";
+	if(delMethod == 2) outStat = "Open";
+
+	cout << setw(12) << curSym->name << setw(12) << outStat
+		 << setw(12) << ' ' << setw(12) << omag << setw(12) << ophase
+		 << setw(12) << ' ' << setw(12) << smag << setw(12) << sphase << endl;
+	curSym->delType = delMethod;
+	if(!curSym->delType) curSym->errExtend = 0;
+	else if(curSym->delType == 1) {
+		curSym->errExtend = errorMagPhase(smag, sphase);
+	} else {
+		curSym->errExtend = errorMagPhase(omag, ophase);
+	}
+	curSym->rd = false;
+}
+
+void GPDD::AnaSContribution() {
+	//Assess Contribution for each symbol
+	list<Symbol*>::iterator it = symbolList.begin(); it++;
+	cout << setw(12) << "Name" << setw(12) << "Status" << setw(12) << "Open" << setw(12) << "Mag" << setw(12) << "Phase" << setw(12) << "Short" << setw(12) << "Mag" << setw(12) << "Phase" << endl;
+	int nElement = 0;
+	while(it != symbolList.end()) {
+		if((*it)->e->type == YZ) {
+			Symbol* p = *it;
+			while(p) {
+				nElement++;
+				symbolAssess(p);
+				p = p->lumpedNext;
+			}
+		} else {
+			nElement++;
+			symbolAssess(*it);
+		}
+		it++;
+	}
+
+	//Sort Symbol Contribution
+	it = symbolList.begin(); it++;
+	string *nameList = new string[nElement];
+	double *errorList = new double[nElement];
+	int k = 0;
+	while(it != symbolList.end()) {
+		if((*it)->e->type == YZ) {
+			Symbol* p = *it;
+			while(p) {
+				nameList[k] = p->name;
+				errorList[k] = p->errExtend;
+				p = p->lumpedNext; k++;
+			}
+		} else {
+			nameList[k] = (*it)->name;
+			errorList[k] = (*it)->errExtend;
+			k++;
+		}
+		it++;
+	}
+	double tmpError;
+	string tmpName;
+	for(int i = 0; i < nElement; i++) {
+		for(int j = i + 1; j < nElement; j++) {
+			if(errorList[i] > errorList[j]) {
+				tmpError = errorList[i]; tmpName = nameList[i];
+				errorList[i] = errorList[j]; nameList[i] = nameList[j];
+				errorList[j] = tmpError; nameList[j] = tmpName;
+			}
+		}
+	}
+	cout << endl << "Sorted Error" << endl;
+	for(int i = 0; i < nElement; i++) {
+		cout << nameList[i] << '\t' << errorList[i] << endl;
+	}
+
+	//Evaluate Deletion Effect
+	int step = 5;
+	for(int n = 0; n <= nElement; n += step) {
+		for(int i = 0; i < n; i++) {
+			it = symbolList.begin(); it++;
+			while(it != symbolList.end()) {
+				if((*it)->e->type == YZ) {
+					Symbol* p = *it; bool stop = false;
+					while(p) {
+						if(p->name == nameList[i]) {
+							if(p->delType) {
+								p->rd = true;
+								p->so = (p->delType == 2) ? true : false;
+							}
+							stop = true; break;
+						}
+						p = p->lumpedNext;
+					}
+					if(stop) break;
+				} else {
+					if((*it)->name == nameList[i]) {
+						if((*it)->delType) {
+							(*it)->rd = true;
+							(*it)->so = ((*it)->delType == 2) ? true : false;
+						}
+						break;
+					}
+				}
+				it++;
+			}
+		}
+		ostringstream ost;
+		ost << n;
+		string fname(ost.str());
+		delCalculation(true, fname);
+	}
 }
 
 void GPDD::printSymbol() const {

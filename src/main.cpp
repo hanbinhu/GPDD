@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 			myGPDD->Calculation();
 			myGPDD->TermCount();
 			myGPDD->AnalysisPrint();
+			myGPDD->AnaSContribution();
 			delete myGPDD;
 			delete myCkt;
 
@@ -54,6 +55,10 @@ int main(int argc, char *argv[])
 			if(flag) myGPDD->TermCount();
 
 			myGPDD->AnalysisPrint();
+
+			cout << "Calculate the Contribution of each symbol in GPDD?[y/n]";
+			flag = input_bool();
+			if(flag) myGPDD->AnaSContribution();
 
 			delete myGPDD;
 			delete myCkt;

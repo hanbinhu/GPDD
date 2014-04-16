@@ -18,6 +18,9 @@ struct GPDDNode {
 	bool mark;				//For tranverse
 	complex<double> value;
 	long long termNum;
+
+	complex<double> lValue;
+	complex<double> rValue;
 	
 	//For Reduction
 	GPDDNode* RNode;

@@ -10,6 +10,8 @@ ACTYPE	Analysis.h	/^enum ACTYPE {LIN, DEC, OCT};$/;"	g
 ACTypeTranslate	Analysis.cpp	/^string Analysis::ACTypeTranslate(int type) const{$/;"	f	class:Analysis	signature:(int type) const
 ACTypeTranslate	Analysis.h	/^		string ACTypeTranslate(int type) const;$/;"	p	class:Analysis	access:private	signature:(int type) const
 ANALYSIS_H	Analysis.h	2;"	d
+AnaSContribution	GPDD.cpp	/^void GPDD::AnaSContribution() {$/;"	f	class:GPDD	signature:()
+AnaSContribution	GPDD.h	/^		void AnaSContribution();$/;"	p	class:GPDD	access:public	signature:()
 Analysis	Analysis.cpp	/^Analysis::Analysis() {	$/;"	f	class:Analysis	signature:()
 Analysis	Analysis.h	/^		Analysis();$/;"	p	class:Analysis	access:public	signature:()
 Analysis	Analysis.h	/^		Analysis(const Analysis& other);$/;"	p	class:Analysis	access:public	signature:(const Analysis& other)
@@ -131,18 +133,24 @@ Edge::type	GPDD_struct.h	/^	int type;$/;"	m	struct:Edge	access:public
 EdgeType	Ckt.h	/^enum EdgeType {YZ = 0, CC, VC, NU, CS, VS, NO};$/;"	g
 Evaluate	GPDD.cpp	/^complex<double> GPDD::Evaluate() const {$/;"	f	class:GPDD	signature:() const
 Evaluate	GPDD.h	/^		complex<double> Evaluate() const;$/;"	p	class:GPDD	access:private	signature:() const
+EvaluatePC	GPDD.cpp	/^complex<double> GPDD::EvaluatePC(const GPDDNode* p, const GPDDNode* c) const {$/;"	f	class:GPDD	signature:(const GPDDNode* p, const GPDDNode* c) const
+EvaluatePC	GPDD.h	/^		complex<double> EvaluatePC(const GPDDNode* p, const GPDDNode* c) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* p, const GPDDNode* c) const
 Exclude	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Exclude(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
 Exclude	GPDD.h	/^		pair<GPDDNode*, bool> Exclude(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
 FLEXSPAWN	Makefile	/^FLEXSPAWN = SpScanner.cpp$/;"	m
 GPDD	GPDD.cpp	/^GPDD::GPDD(const Ckt* myCkt) {$/;"	f	class:GPDD	signature:(const Ckt* myCkt)
 GPDD	GPDD.h	/^		GPDD(const Ckt* myCkt);$/;"	p	class:GPDD	access:public	signature:(const Ckt* myCkt)
 GPDD	GPDD.h	/^class GPDD {$/;"	c
+GPDD::AnaSContribution	GPDD.cpp	/^void GPDD::AnaSContribution() {$/;"	f	class:GPDD	signature:()
+GPDD::AnaSContribution	GPDD.h	/^		void AnaSContribution();$/;"	p	class:GPDD	access:public	signature:()
 GPDD::AnalysisPrint	GPDD.cpp	/^void GPDD::AnalysisPrint() const {$/;"	f	class:GPDD	signature:() const
 GPDD::AnalysisPrint	GPDD.h	/^		void AnalysisPrint() const;$/;"	p	class:GPDD	access:public	signature:() const
 GPDD::Calculation	GPDD.cpp	/^void GPDD::Calculation() {$/;"	f	class:GPDD	signature:()
 GPDD::Calculation	GPDD.h	/^		void Calculation();$/;"	p	class:GPDD	access:public	signature:()
 GPDD::Evaluate	GPDD.cpp	/^complex<double> GPDD::Evaluate() const {$/;"	f	class:GPDD	signature:() const
 GPDD::Evaluate	GPDD.h	/^		complex<double> Evaluate() const;$/;"	p	class:GPDD	access:private	signature:() const
+GPDD::EvaluatePC	GPDD.cpp	/^complex<double> GPDD::EvaluatePC(const GPDDNode* p, const GPDDNode* c) const {$/;"	f	class:GPDD	signature:(const GPDDNode* p, const GPDDNode* c) const
+GPDD::EvaluatePC	GPDD.h	/^		complex<double> EvaluatePC(const GPDDNode* p, const GPDDNode* c) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* p, const GPDDNode* c) const
 GPDD::Exclude	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Exclude(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
 GPDD::Exclude	GPDD.h	/^		pair<GPDDNode*, bool> Exclude(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
 GPDD::GPDD	GPDD.cpp	/^GPDD::GPDD(const Ckt* myCkt) {$/;"	f	class:GPDD	signature:(const Ckt* myCkt)
@@ -161,6 +169,20 @@ GPDD::TermCount	GPDD.h	/^		void TermCount();$/;"	p	class:GPDD	access:public	sign
 GPDD::anaAC	GPDD.h	/^		Analysis *anaAC;$/;"	m	class:GPDD	access:private
 GPDD::caled	GPDD.h	/^		bool caled;$/;"	m	class:GPDD	access:private
 GPDD::cirTime	GPDD.h	/^		long cirTime;$/;"	m	class:GPDD	access:private
+GPDD::delCalculation	GPDD.cpp	/^pair<double, double> GPDD::delCalculation(bool fout, const string& filename) {$/;"	f	class:GPDD	signature:(bool fout, const string& filename)
+GPDD::delCalculation	GPDD.h	/^		pair<double, double> delCalculation(bool fout = false, const string& filename = "");$/;"	p	class:GPDD	access:private	signature:(bool fout = false, const string& filename = Ó)
+GPDD::delEvaluate	GPDD.cpp	/^complex<double> GPDD::delEvaluate() const {$/;"	f	class:GPDD	signature:() const
+GPDD::delEvaluate	GPDD.h	/^		complex<double> delEvaluate() const;$/;"	p	class:GPDD	access:private	signature:() const
+GPDD::delPreProcess	GPDD.cpp	/^void GPDD::delPreProcess() {$/;"	f	class:GPDD	signature:()
+GPDD::delPreProcess	GPDD.h	/^		void delPreProcess();$/;"	p	class:GPDD	access:private	signature:()
+GPDD::delUpdateSymbol	GPDD.cpp	/^void GPDD::delUpdateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)
+GPDD::delUpdateSymbol	GPDD.h	/^		void delUpdateSymbol(const double freq);$/;"	p	class:GPDD	access:private	signature:(const double freq)
+GPDD::errorAssess	GPDD.cpp	/^double GPDD::errorAssess(const vector<double>& ori, const vector<double>& test) {$/;"	f	class:GPDD	signature:(const vector<double>& ori, const vector<double>& test)
+GPDD::errorAssess	GPDD.cpp	/^double GPDD::errorAssess(const vector<double>& ori, const vector<double>& test, int pos) {$/;"	f	class:GPDD	signature:(const vector<double>& ori, const vector<double>& test, int pos)
+GPDD::errorAssess	GPDD.h	/^		double errorAssess(const vector<double>& ori, const vector<double>& test);$/;"	p	class:GPDD	access:private	signature:(const vector<double>& ori, const vector<double>& test)
+GPDD::errorAssess	GPDD.h	/^		double errorAssess(const vector<double>& ori, const vector<double>& test, int pos);$/;"	p	class:GPDD	access:private	signature:(const vector<double>& ori, const vector<double>& test, int pos)
+GPDD::errorMagPhase	GPDD.cpp	/^double GPDD::errorMagPhase(double mag, double phase) {$/;"	f	class:GPDD	signature:(double mag, double phase)
+GPDD::errorMagPhase	GPDD.h	/^		double errorMagPhase(double mag, double phase);$/;"	p	class:GPDD	access:private	signature:(double mag, double phase)
 GPDD::expand	GPDD.cpp	/^void GPDD::expand(bool step) {$/;"	f	class:GPDD	signature:(bool step)
 GPDD::expand	GPDD.h	/^		void expand(bool step = false);$/;"	p	class:GPDD	access:public	signature:(bool step = false)
 GPDD::expandNode	GPDD.h	/^		long expandNode[3];$/;"	m	class:GPDD	access:private
@@ -172,6 +194,7 @@ GPDD::init	GPDD.cpp	/^void GPDD::init() {$/;"	f	class:GPDD	signature:()
 GPDD::init	GPDD.h	/^		void init();$/;"	p	class:GPDD	access:public	signature:()
 GPDD::initTime	GPDD.h	/^		long initTime;$/;"	m	class:GPDD	access:private
 GPDD::inited	GPDD.h	/^		bool inited;$/;"	m	class:GPDD	access:private
+GPDD::magList	GPDD.h	/^		vector<double> magList;$/;"	m	class:GPDD	access:private
 GPDD::maxEFH	GPDD.h	/^		int maxEFH;$/;"	m	class:GPDD	access:private
 GPDD::nTermDen	GPDD.h	/^		long long nTermDen;$/;"	m	class:GPDD	access:private
 GPDD::nTermNum	GPDD.h	/^		long long nTermNum;$/;"	m	class:GPDD	access:private
@@ -179,6 +202,7 @@ GPDD::nullorList	GPDD.h	/^		list<Symbol*> nullorList;$/;"	m	class:GPDD	access:pr
 GPDD::numEdge	GPDD.h	/^		int numEdge;$/;"	m	class:GPDD	access:private
 GPDD::numNode	GPDD.h	/^		int numNode;$/;"	m	class:GPDD	access:private
 GPDD::onceAvgCalTime	GPDD.h	/^		long onceAvgCalTime;$/;"	m	class:GPDD	access:private
+GPDD::phaseList	GPDD.h	/^		vector<double> phaseList;$/;"	m	class:GPDD	access:private
 GPDD::printConnection	GPDD.cpp	/^void GPDD::printConnection(const GPDDNode* curNode) const {$/;"	f	class:GPDD	signature:(const GPDDNode* curNode) const
 GPDD::printConnection	GPDD.h	/^		void printConnection(const GPDDNode* curNode) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* curNode) const
 GPDD::printGPDD	GPDD.cpp	/^void GPDD::printGPDD() const {$/;"	f	class:GPDD	signature:() const
@@ -194,6 +218,8 @@ GPDD::reduction	GPDD.h	/^		void reduction();$/;"	p	class:GPDD	access:public	sign
 GPDD::stepExpand	GPDD.h	/^		bool stepExpand;$/;"	m	class:GPDD	access:private
 GPDD::stepExpandPrint	GPDD.cpp	/^void GPDD::stepExpandPrint(const GPDDNode* curNode) const {$/;"	f	class:GPDD	signature:(const GPDDNode* curNode) const
 GPDD::stepExpandPrint	GPDD.h	/^		void stepExpandPrint(const GPDDNode* curNode) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* curNode) const
+GPDD::symbolAssess	GPDD.cpp	/^void GPDD::symbolAssess(Symbol* curSym) {$/;"	f	class:GPDD	signature:(Symbol* curSym)
+GPDD::symbolAssess	GPDD.h	/^		void symbolAssess(Symbol* curSym);$/;"	p	class:GPDD	access:private	signature:(Symbol* curSym)
 GPDD::symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
 GPDD::tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
 GPDD::termCounted	GPDD.h	/^		bool termCounted;$/;"	m	class:GPDD	access:private
@@ -214,9 +240,11 @@ GPDDNode::exNode	GPDDNode.h	/^	GPDDNode* exNode;$/;"	m	struct:GPDDNode	access:pu
 GPDDNode::exSign	GPDDNode.h	/^	bool inSign, exSign;	\/\/true for 1, false for -1$/;"	m	struct:GPDDNode	access:public
 GPDDNode::inNode	GPDDNode.h	/^	GPDDNode* inNode;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::inSign	GPDDNode.h	/^	bool inSign, exSign;	\/\/true for 1, false for -1$/;"	m	struct:GPDDNode	access:public
+GPDDNode::lValue	GPDDNode.h	/^	complex<double> lValue;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::leftG	GPDDNode.h	/^	Graph* leftG;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::mark	GPDDNode.h	/^	bool mark;				\/\/For tranverse$/;"	m	struct:GPDDNode	access:public
 GPDDNode::numEFH	GPDDNode.h	/^	int numEFH;				\/\/EFH number below this node$/;"	m	struct:GPDDNode	access:public
+GPDDNode::rValue	GPDDNode.h	/^	complex<double> rValue;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::rightG	GPDDNode.h	/^	Graph* rightG;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::sym	GPDDNode.h	/^	Symbol* sym;$/;"	m	struct:GPDDNode	access:public
 GPDDNode::termNum	GPDDNode.h	/^	long long termNum;$/;"	m	struct:GPDDNode	access:public
@@ -398,10 +426,18 @@ SRCS	Makefile	/^SRCS = Analysis.cpp Ckt.cpp main.cpp GPDD.cpp Graph.cpp HashGrap
 Short	Graph.cpp	/^int Graph::Short(const Edge* e, bool &sign) {$/;"	f	class:Graph	signature:(const Edge* e, bool &sign)
 Short	Graph.h	/^		int Short(const Edge* e, bool &sign);$/;"	p	class:Graph	access:public	signature:(const Edge* e, bool &sign)
 Symbol	GPDD_struct.h	/^struct Symbol {$/;"	s
+Symbol::delType	GPDD_struct.h	/^	int delType;$/;"	m	struct:Symbol	access:public
 Symbol::e	GPDD_struct.h	/^	Edge* e;$/;"	m	struct:Symbol	access:public
+Symbol::errExtend	GPDD_struct.h	/^	double errExtend;	$/;"	m	struct:Symbol	access:public
 Symbol::lumpedNext	GPDD_struct.h	/^	Symbol* lumpedNext;$/;"	m	struct:Symbol	access:public
 Symbol::name	GPDD_struct.h	/^	string name;$/;"	m	struct:Symbol	access:public
 Symbol::pe	GPDD_struct.h	/^	Edge* pe;$/;"	m	struct:Symbol	access:public
+Symbol::rd	GPDD_struct.h	/^	bool rd, so;$/;"	m	struct:Symbol	access:public
+Symbol::rdEval	GPDD_struct.h	/^	bool rdEval, soEval;$/;"	m	struct:Symbol	access:public
+Symbol::shortSym	GPDD_struct.h	/^	Symbol* shortSym;$/;"	m	struct:Symbol	access:public
+Symbol::shortSymShort	GPDD_struct.h	/^	Symbol* shortSymShort;$/;"	m	struct:Symbol	access:public
+Symbol::so	GPDD_struct.h	/^	bool rd, so;$/;"	m	struct:Symbol	access:public
+Symbol::soEval	GPDD_struct.h	/^	bool rdEval, soEval;$/;"	m	struct:Symbol	access:public
 Symbol::v	GPDD_struct.h	/^	double v;$/;"	m	struct:Symbol	access:public
 Symbol::value	GPDD_struct.h	/^	complex<double> value;$/;"	m	struct:Symbol	access:public
 Symbol::~Symbol	GPDD_struct.h	/^	~Symbol() {delete e; delete pe;}$/;"	f	struct:Symbol	access:public	signature:()
@@ -452,6 +488,15 @@ compareDouble	Analysis.h	/^		bool compareDouble(double a, double b) const;$/;"	p
 crashTime	HashGPDDNode.h	/^		int crashTime;$/;"	m	class:HashGPDDNode	access:private
 crashTime	HashGraph.h	/^		int crashTime;$/;"	m	class:HashGraph	access:private
 crashTime	HashReduction.h	/^		int crashTime;$/;"	m	class:HashReduction	access:private
+delCalculation	GPDD.cpp	/^pair<double, double> GPDD::delCalculation(bool fout, const string& filename) {$/;"	f	class:GPDD	signature:(bool fout, const string& filename)
+delCalculation	GPDD.h	/^		pair<double, double> delCalculation(bool fout = false, const string& filename = "");$/;"	p	class:GPDD	access:private	signature:(bool fout = false, const string& filename = Ó)
+delEvaluate	GPDD.cpp	/^complex<double> GPDD::delEvaluate() const {$/;"	f	class:GPDD	signature:() const
+delEvaluate	GPDD.h	/^		complex<double> delEvaluate() const;$/;"	p	class:GPDD	access:private	signature:() const
+delPreProcess	GPDD.cpp	/^void GPDD::delPreProcess() {$/;"	f	class:GPDD	signature:()
+delPreProcess	GPDD.h	/^		void delPreProcess();$/;"	p	class:GPDD	access:private	signature:()
+delType	GPDD_struct.h	/^	int delType;$/;"	m	struct:Symbol	access:public
+delUpdateSymbol	GPDD.cpp	/^void GPDD::delUpdateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)
+delUpdateSymbol	GPDD.h	/^		void delUpdateSymbol(const double freq);$/;"	p	class:GPDD	access:private	signature:(const double freq)
 e	GPDD_struct.h	/^	Edge* e;$/;"	m	struct:Symbol	access:public
 eList	Ckt.h	/^		inline const list<cktEdge*> &eList() const {return edgeList;}$/;"	f	class:Ckt	access:public	signature:() const
 eTable	Graph.h	/^		list<Edge> eTable;$/;"	m	class:Graph	access:public
@@ -459,6 +504,13 @@ edgeList	Ckt.h	/^		list<cktEdge*> edgeList;$/;"	m	class:Ckt	access:private
 edgeTable	Graph.h	/^		Edge* edgeTable;$/;"	m	class:Graph	access:public
 edgeTypeTranslate	Ckt.cpp	/^string Ckt::edgeTypeTranslate(int type) const {$/;"	f	class:Ckt	signature:(int type) const
 edgeTypeTranslate	Ckt.h	/^		string edgeTypeTranslate(int type) const;$/;"	p	class:Ckt	access:private	signature:(int type) const
+errExtend	GPDD_struct.h	/^	double errExtend;	$/;"	m	struct:Symbol	access:public
+errorAssess	GPDD.cpp	/^double GPDD::errorAssess(const vector<double>& ori, const vector<double>& test) {$/;"	f	class:GPDD	signature:(const vector<double>& ori, const vector<double>& test)
+errorAssess	GPDD.cpp	/^double GPDD::errorAssess(const vector<double>& ori, const vector<double>& test, int pos) {$/;"	f	class:GPDD	signature:(const vector<double>& ori, const vector<double>& test, int pos)
+errorAssess	GPDD.h	/^		double errorAssess(const vector<double>& ori, const vector<double>& test);$/;"	p	class:GPDD	access:private	signature:(const vector<double>& ori, const vector<double>& test)
+errorAssess	GPDD.h	/^		double errorAssess(const vector<double>& ori, const vector<double>& test, int pos);$/;"	p	class:GPDD	access:private	signature:(const vector<double>& ori, const vector<double>& test, int pos)
+errorMagPhase	GPDD.cpp	/^double GPDD::errorMagPhase(double mag, double phase) {$/;"	f	class:GPDD	signature:(double mag, double phase)
+errorMagPhase	GPDD.h	/^		double errorMagPhase(double mag, double phase);$/;"	p	class:GPDD	access:private	signature:(double mag, double phase)
 exNode	GPDDNode.h	/^	GPDDNode* exNode;$/;"	m	struct:GPDDNode	access:public
 exSign	GPDDNode.h	/^	bool inSign, exSign;	\/\/true for 1, false for -1$/;"	m	struct:GPDDNode	access:public
 expand	GPDD.cpp	/^void GPDD::expand(bool step) {$/;"	f	class:GPDD	signature:(bool step)
@@ -504,8 +556,10 @@ isSet	Analysis.h	/^		inline bool isSet() {return set;}$/;"	f	class:Analysis	acce
 it_HashTable	HashGPDDNode.h	/^		typedef HashTable::iterator it_HashTable;$/;"	t	class:HashGPDDNode	access:private
 it_HashTable	HashReduction.h	/^		typedef HashTable::iterator it_HashTable;$/;"	t	class:HashReduction	access:private
 keyNum	HashGraph.h	/^		int keyNum;$/;"	m	class:HashGraph	access:private
+lValue	GPDDNode.h	/^	complex<double> lValue;$/;"	m	struct:GPDDNode	access:public
 leftG	GPDDNode.h	/^	Graph* leftG;$/;"	m	struct:GPDDNode	access:public
 lumpedNext	GPDD_struct.h	/^	Symbol* lumpedNext;$/;"	m	struct:Symbol	access:public
+magList	GPDD.h	/^		vector<double> magList;$/;"	m	class:GPDD	access:private
 main	main.cpp	/^int main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
 mark	GPDDNode.h	/^	bool mark;				\/\/For tranverse$/;"	m	struct:GPDDNode	access:public
 maxEFH	GPDD.h	/^		int maxEFH;$/;"	m	class:GPDD	access:private
@@ -564,6 +618,7 @@ parseVCXS	Ckt.h	/^		void parseVCXS(const char* eleName, const char* XSName1, con
 parseVsrc	Ckt.cpp	/^void Ckt::parseVsrc(const char* eleName, const char* nName1, const char* nName2, double v) {$/;"	f	class:Ckt	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
 parseVsrc	Ckt.h	/^		void parseVsrc(const char* eleName, const char* nName1, const char* nName2, double v);$/;"	p	class:Ckt	access:public	signature:(const char* eleName, const char* nName1, const char* nName2, double v)
 pe	GPDD_struct.h	/^	Edge* pe;$/;"	m	struct:Symbol	access:public
+phaseList	GPDD.h	/^		vector<double> phaseList;$/;"	m	class:GPDD	access:private
 printACInf	Analysis.cpp	/^void Analysis::printACInf() const {$/;"	f	class:Analysis	signature:() const
 printACInf	Analysis.h	/^		void printACInf() const;$/;"	p	class:Analysis	access:public	signature:() const
 printCkt	Ckt.cpp	/^void Ckt::printCkt() const {$/;"	f	class:Ckt	signature:() const
@@ -578,6 +633,9 @@ printInit	GPDD.cpp	/^void GPDD::printInit() const {$/;"	f	class:GPDD	signature:(
 printInit	GPDD.h	/^		void printInit() const;$/;"	p	class:GPDD	access:public	signature:() const
 printSymbol	GPDD.cpp	/^void GPDD::printSymbol() const {$/;"	f	class:GPDD	signature:() const
 printSymbol	GPDD.h	/^		void printSymbol() const;$/;"	p	class:GPDD	access:public	signature:() const
+rValue	GPDDNode.h	/^	complex<double> rValue;$/;"	m	struct:GPDDNode	access:public
+rd	GPDD_struct.h	/^	bool rd, so;$/;"	m	struct:Symbol	access:public
+rdEval	GPDD_struct.h	/^	bool rdEval, soEval;$/;"	m	struct:Symbol	access:public
 reduceNode	GPDD.h	/^		long reduceNode[3];$/;"	m	class:GPDD	access:private
 reduceTime	GPDD.h	/^		long reduceTime;$/;"	m	class:GPDD	access:private
 reduction	GPDD.cpp	/^void GPDD::reduction() {$/;"	f	class:GPDD	signature:()
@@ -590,6 +648,10 @@ setOutFile	Analysis.cpp	/^void Analysis::setOutFile(const char* fname) {$/;"	f	c
 setOutFile	Analysis.h	/^		void setOutFile(const char* fname);$/;"	p	class:Analysis	access:public	signature:(const char* fname)
 shortNullor	Graph.cpp	/^void Graph::shortNullor() {$/;"	f	class:Graph	signature:()
 shortNullor	Graph.h	/^		void shortNullor();$/;"	p	class:Graph	access:public	signature:()
+shortSym	GPDD_struct.h	/^	Symbol* shortSym;$/;"	m	struct:Symbol	access:public
+shortSymShort	GPDD_struct.h	/^	Symbol* shortSymShort;$/;"	m	struct:Symbol	access:public
+so	GPDD_struct.h	/^	bool rd, so;$/;"	m	struct:Symbol	access:public
+soEval	GPDD_struct.h	/^	bool rdEval, soEval;$/;"	m	struct:Symbol	access:public
 src	Ckt.h	/^		bool src;	\/\/src appear$/;"	m	class:Ckt	access:private
 stepExpand	GPDD.h	/^		bool stepExpand;$/;"	m	class:GPDD	access:private
 stepExpandPrint	GPDD.cpp	/^void GPDD::stepExpandPrint(const GPDDNode* curNode) const {$/;"	f	class:GPDD	signature:(const GPDDNode* curNode) const
@@ -598,6 +660,8 @@ sweep	Analysis.cpp	/^const vector<double>& Analysis::sweep() {$/;"	f	class:Analy
 sweep	Analysis.h	/^		const vector<double>& sweep();$/;"	p	class:Analysis	access:public	signature:()
 sym	GPDDNode.h	/^	Symbol* sym;$/;"	m	struct:GPDDNode	access:public
 sym	GPDD_struct.h	/^	Symbol *sym;$/;"	m	struct:Edge	access:public
+symbolAssess	GPDD.cpp	/^void GPDD::symbolAssess(Symbol* curSym) {$/;"	f	class:GPDD	signature:(Symbol* curSym)
+symbolAssess	GPDD.h	/^		void symbolAssess(Symbol* curSym);$/;"	p	class:GPDD	access:private	signature:(Symbol* curSym)
 symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
 tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
 termCounted	GPDD.h	/^		bool termCounted;$/;"	m	class:GPDD	access:private

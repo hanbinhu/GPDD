@@ -28,6 +28,14 @@ struct Symbol {
 	double v;
 	complex<double> value;
 	Symbol* lumpedNext;
+
+	bool rd, so;
+	bool rdEval, soEval;
+	Symbol* shortSym;
+	Symbol* shortSymShort;
+	int delType;
+	double errExtend;	
+
 	~Symbol() {delete e; delete pe;}
 };
 
