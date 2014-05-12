@@ -1,13 +1,13 @@
 *RC Circuit
 
-R1 in 2 1.0e+15
-Rs 2 1 10k
+R1 in 2 5k
+Rs 2 1 5k
 C1 1 0 1p
 R2 1 out 10k
 C2 out 0 1p
 
 V1 in 0 1
 
-.ac out 0 DEC 1 100 1G
+.ac out 0 DEC 10 10 10G
 
 .end

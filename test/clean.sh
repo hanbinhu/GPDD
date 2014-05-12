@@ -5,4 +5,4 @@ rm -rf *.out
 cd $cleanpath/RCtest
 rm -rf *.out
 cd $cleanpath/two_stage
-rm -rf *.out
+rm -rf *.out*

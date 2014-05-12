@@ -1015,9 +1015,10 @@ void GPDD::AnaSContribution() {
 	}
 
 	//Evaluate Deletion Effect
-	int step = 5;
+	vector<Symbol*> sortedSymList;
+	int step = 3; int nStart = 0; bool f = true;
 	for(int n = 0; n <= nElement; n += step) {
-		for(int i = 0; i < n; i++) {
+		for(int i = nStart; i < n; i++) {
 			it = symbolList.begin(); it++;
 			while(it != symbolList.end()) {
 				if((*it)->e->type == YZ) {
@@ -1028,6 +1029,7 @@ void GPDD::AnaSContribution() {
 								p->rd = true;
 								p->so = (p->delType == 2) ? true : false;
 							}
+							sortedSymList.push_back(p);
 							stop = true; break;
 						}
 						p = p->lumpedNext;
@@ -1039,17 +1041,97 @@ void GPDD::AnaSContribution() {
 							(*it)->rd = true;
 							(*it)->so = ((*it)->delType == 2) ? true : false;
 						}
+						sortedSymList.push_back(*it);
 						break;
 					}
 				}
 				it++;
 			}
 		}
+		nStart = n;
 		ostringstream ost;
 		ost << n;
 		string fname(ost.str());
 		delCalculation(true, fname);
+
+		if(f && (n + step > nElement)) {
+			n = nElement - step;
+			f = false;
+		}
 	}
+	it = symbolList.begin();
+	sortedSymList.push_back(*it);
+
+	//Topology Analysis
+	
+	topologyAnalysis(sortedSymList);
+	
+}
+
+void GPDD::topologyAnalysis(const vector<Symbol*> &sortSymList) {
+	cout << "Topology Analysis Started..." << endl;
+
+	//Initial Graph Generation
+	Graph* tmpG = new Graph(numNode);
+	list<Symbol*>::const_iterator itN = nullorList.begin();
+	while(itN != nullorList.end()) {
+		tmpG->addEdge((*itN)->pe);
+		tmpG->addEdge((*itN)->e);
+		itN++;
+	}
+	vector<Symbol*>::const_iterator it = sortSymList.begin();
+	while(it != sortSymList.end()) {
+		if((*it)->e->type == YZ) tmpG->addEdge((*it)->e);
+		else {
+			tmpG->addEdge((*it)->e);
+			tmpG->addEdge((*it)->pe);
+		}
+		it++;
+	}
+	tmpG->shortNullor();
+
+	vector<Graph*> simpGraphList;
+	simpGraphList.push_back(tmpG);
+
+	//Simplification
+	it = sortSymList.begin(); Graph* preG = tmpG;
+	while(it != sortSymList.end()) {
+		Graph* newG = new Graph(preG); preG = newG;
+		simpGraphList.push_back(newG);
+
+		bool fakeSign;
+		Symbol* curSym = *it;
+		if(curSym->delType == 1) {
+			if(curSym->e->type == YZ) newG->Short(curSym->e, fakeSign);
+			else {
+				newG->Short(curSym->e, fakeSign);
+				newG->Short(curSym->pe, fakeSign);
+			}
+		} else if(curSym->delType == 2) {
+			if(curSym->e->type == YZ) newG->Open(curSym->e);
+			else {
+				if(curSym->e->type = VC) newG->Open(curSym->e);
+				else if(curSym->e->type = CC) newG->Short(curSym->e, fakeSign);
+				else {
+					cout << "Wrong Situation" << endl; break;
+				}
+				if(curSym->pe->type = CS) newG->Open(curSym->pe);
+				else if(curSym->pe->type = VS) newG->Short(curSym->pe, fakeSign);
+				else {
+					cout << "Wrong Situation" << endl; break;
+				}
+			}
+		} else {
+			cout << "Didn't Consider Now." << endl;
+			break;
+		}
+
+		it++;
+	}
+
+	int showNum;
+	cin >> showNum;
+	simpGraphList[showNum]->printGraph();
 }
 
 void GPDD::printSymbol() const {

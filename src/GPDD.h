@@ -88,10 +88,12 @@ class GPDD {
 		complex<double> EvaluatePC(const GPDDNode* p, const GPDDNode* c) const;
 		complex<double> delEvaluate() const;
 		pair<double, double> delCalculation(bool fout = false, const string& filename = "");
+
 		double errorAssess(const vector<double>& ori, const vector<double>& test);
 		double errorAssess(const vector<double>& ori, const vector<double>& test, int pos);
 		double errorMagPhase(double mag, double phase);
 		void symbolAssess(Symbol* curSym);
+		void topologyAnalysis(const vector<Symbol*> &sortSymList);
 
 		vector<double> magList;
 		vector<double> phaseList;
