@@ -1,4 +1,4 @@
-cscope 15 $HOME/code/git_GPDD/src -q 0000001579 0000152926
+cscope 15 $HOME/code/git_GPDD/src -q 0000001590 0000155247
 	@Analysis.cpp
 
 1 
@@ -10181,11 +10181,27 @@ i
 ídl
 ;
 
-1018 
-°ï
- = 5;
+1018 
+ve˘‹
+<
+Symbﬁ
+*> 
+s‹ãdSymLi°
+;
 
-1019 
+1019 
+°ï
+ = 3; 
+nSèπ
+ = 0; 
+boﬁ
+ 
+f
+ = 
+åue
+;
+
+1020 
 n
  = 0;Ç <
 nEÀmít
@@ -10193,13 +10209,15 @@ nEÀmít
 °ï
 ) {
 
-1020 
+1021 
 i
- = 0; i < 
+ = 
+nSèπ
+; i < 
 n
 ; i++) {
 
-1021 
+1022 
 ô
  = 
 symbﬁLi°
@@ -10207,7 +10225,7 @@ symbﬁLi°
 	`begö
 (); it++;
 
-1022 
+1023 
 ô
  !
 symbﬁLi°
@@ -10215,7 +10233,7 @@ symbﬁLi°
 	`íd
 ()) {
 
-1023 if((*
+1024 if((*
 ô
 )->
 e
@@ -10225,7 +10243,7 @@ ty≥
 YZ
 ) {
 
-1024 
+1025 
 Symbﬁ
 * 
 p
@@ -10239,11 +10257,11 @@ boﬁ
 Ál£
 ;
 
-1025 
+1026 
 p
 ) {
 
-1026 if(
+1027 if(
 p
 ->
 «me
@@ -10253,13 +10271,13 @@ p
 i
 ]) {
 
-1027 if(
+1028 if(
 p
 ->
 dñTy≥
 ) {
 
-1028 
+1029 
 p
 ->
 rd
@@ -10267,7 +10285,7 @@ rd
 åue
 ;
 
-1029 
+1030 
 p
 ->
 so
@@ -10279,23 +10297,31 @@ dñTy≥
 Ál£
 ;
 
-1031 
+1032 
+s‹ãdSymLi°
+.
+	`push_back
+(
+p
+);
+
+1033 
 °›
  = 
 åue
 ; ;
 
-1033 
+1035 
 p
  =Ö->
 lum≥dNext
 ;
 
-1035 if(
+1037 if(
 °›
 ) ;
 
-1037 if((*
+1039 if((*
 ô
 )->
 «me
@@ -10305,13 +10331,13 @@ lum≥dNext
 i
 ]) {
 
-1038 if((*
+1040 if((*
 ô
 )->
 dñTy≥
 ) {
 
-1039 (*
+1041 (*
 ô
 )->
 rd
@@ -10319,7 +10345,7 @@ rd
 åue
 ;
 
-1040 (*
+1042 (*
 ô
 )->
 so
@@ -10331,23 +10357,37 @@ dñTy≥
 Ál£
 ;
 
-1045 
+1044 
+s‹ãdSymLi°
+.
+	`push_back
+(*
+ô
+);
+
+1048 
 ô
 ++;
 
-1048 
+1051 
+nSèπ
+ = 
+n
+;
+
+1052 
 o°rög°ªam
  
 o°
 ;
 
-1049 
+1053 
 o°
  << 
 n
 ;
 
-1050 
+1054 
 °rög
  
 	`‚ame
@@ -10357,7 +10397,7 @@ o°
 	`°r
 ());
 
-1051 
+1055 
 	`dñCÆcuœti⁄
 (
 åue
@@ -10365,29 +10405,469 @@ o°
 ‚ame
 );
 
-1053 
+1057 if(
+f
+ && (
+n
+ + 
+°ï
+ > 
+nEÀmít
+)) {
+
+1058 
+n
+ = 
+nEÀmít
+ - 
+°ï
+;
+
+1059 
+f
+ = 
+Ál£
+;
+
+1062 
+ô
+ = 
+symbﬁLi°
+.
+	`begö
+();
+
+1063 
+s‹ãdSymLi°
+.
+	`push_back
+(*
+ô
+);
+
+1067 
+	`t›ﬁogyA«lysis
+(
+s‹ãdSymLi°
+);
+
+1069 
 	}
 }
 
-1055 
+1071 
+	gGPDD
+::
+t›ﬁogyA«lysis
+(c⁄° 
+ve˘‹
+<
+Symbﬁ
+*> &
+s‹tSymLi°
+) {
+
+1072 
+cout
+ << "T›ﬁogy A«lysi†Sèπed..." << 
+ídl
+;
+
+1075 
+Gøph
+* 
+	gtmpG
+ = 
+√w
+ Gøph(
+numNode
+);
+
+1076 
+	gli°
+<
+	gSymbﬁ
+*>::
+c⁄°_ôî©‹
+ 
+ôN
+ = 
+nuŒ‹Li°
+.
+begö
+();
+
+1077 
+	gôN
+ !
+nuŒ‹Li°
+.
+íd
+()) {
+
+1078 
+tmpG
+->
+addEdge
+((*
+ôN
+)->
+≥
+);
+
+1079 
+	gtmpG
+->
+addEdge
+((*
+ôN
+)->
+e
+);
+
+1080 
+	gôN
+++;
+
+1082 
+	gve˘‹
+<
+	gSymbﬁ
+*>::
+c⁄°_ôî©‹
+ 
+ô
+ = 
+s‹tSymLi°
+.
+begö
+();
+
+1083 
+	gô
+ !
+s‹tSymLi°
+.
+íd
+()) {
+
+1084 if((*
+ô
+)->
+e
+->
+ty≥
+ =
+YZ
+Ë
+tmpG
+->
+addEdge
+((*it)->e);
+
+1086 
+	gtmpG
+->
+addEdge
+((*
+ô
+)->
+e
+);
+
+1087 
+	gtmpG
+->
+addEdge
+((*
+ô
+)->
+≥
+);
+
+1089 
+	gô
+++;
+
+1091 
+	gtmpG
+->
+sh‹tNuŒ‹
+();
+
+1093 
+	gve˘‹
+<
+	gGøph
+*> 
+	gsimpGøphLi°
+;
+
+1094 
+	gsimpGøphLi°
+.
+push_back
+(
+tmpG
+);
+
+1097 
+	gô
+ = 
+s‹tSymLi°
+.
+begö
+(); 
+Gøph
+* 
+	g¥eG
+ = 
+tmpG
+;
+
+1098 
+	gô
+ !
+s‹tSymLi°
+.
+íd
+()) {
+
+1099 
+Gøph
+* 
+√wG
+ = 
+√w
+ Gøph(
+¥eG
+); 
+	g¥eG
+ =ÇewG;
+
+1100 
+	gsimpGøphLi°
+.
+push_back
+(
+√wG
+);
+
+1102 
+boﬁ
+ 
+	gÁkeSign
+;
+
+1103 
+Symbﬁ
+* 
+	gcurSym
+ = *
+ô
+;
+
+1104 if(
+	gcurSym
+->
+	gdñTy≥
+ == 1) {
+
+1105 if(
+curSym
+->
+e
+->
+ty≥
+ =
+YZ
+Ë
+√wG
+->
+Sh‹t
+(curSym->e, 
+ÁkeSign
+);
+
+1107 
+	g√wG
+->
+Sh‹t
+(
+curSym
+->
+e
+, 
+ÁkeSign
+);
+
+1108 
+	g√wG
+->
+Sh‹t
+(
+curSym
+->
+≥
+, 
+ÁkeSign
+);
+
+1110 } if(
+	gcurSym
+->
+	gdñTy≥
+ == 2) {
+
+1111 if(
+curSym
+->
+e
+->
+ty≥
+ =
+YZ
+Ë
+√wG
+->
+O≥n
+(curSym->e);
+
+1113 if(
+	gcurSym
+->
+	ge
+->
+	gty≥
+ = 
+VC
+Ë
+√wG
+->
+O≥n
+(
+curSym
+->
+e
+);
+
+1114 if(
+	gcurSym
+->
+	ge
+->
+	gty≥
+ = 
+CC
+Ë
+√wG
+->
+Sh‹t
+(
+curSym
+->
+e
+, 
+ÁkeSign
+);
+
+1116 
+	gcout
+ << "Wr⁄g Sôu©i⁄" << 
+	gídl
+; ;
+
+1118 if(
+	gcurSym
+->
+	g≥
+->
+	gty≥
+ = 
+CS
+Ë
+√wG
+->
+O≥n
+(
+curSym
+->
+≥
+);
+
+1119 if(
+	gcurSym
+->
+	g≥
+->
+	gty≥
+ = 
+VS
+Ë
+√wG
+->
+Sh‹t
+(
+curSym
+->
+≥
+, 
+ÁkeSign
+);
+
+1121 
+	gcout
+ << "Wr⁄g Sôu©i⁄" << 
+	gídl
+; ;
+
+1125 
+	gcout
+ << "Didn'àC⁄sidî Now." << 
+	gídl
+;
+
+1129 
+	gô
+++;
+
+1132 
+	gshowNum
+;
+
+1133 
+	gcö
+ >> 
+	gshowNum
+;
+
+1134 
+	gsimpGøphLi°
+[
+showNum
+]->
+¥ötGøph
+();
+
+1137 
 	gGPDD
 ::
 	$¥ötSymbﬁ
 () const {
 
-1056 
+1138 
 cout
  << "PröàAŒ Symbﬁ†ö GPDD..." << 
 ídl
 ;
 
-1057 
+1139 
 cout
  << "AŒ NuŒ‹s:" << 
 ídl
 ;
 
-1058 
+1140 
 li°
 <
 Symbﬁ
@@ -10401,7 +10881,7 @@ nuŒ‹Li°
 	`begö
 ();
 
-1059 
+1141 
 ô
  !
 nuŒ‹Li°
@@ -10409,7 +10889,7 @@ nuŒ‹Li°
 	`íd
 ()) {
 
-1060 
+1142 
 cout
  << (*
 ô
@@ -10421,7 +10901,7 @@ e
 node1
  << '\t'
 
-1061 << (*
+1143 << (*
 ô
 )->
 e
@@ -10433,7 +10913,7 @@ node2
 node1
  << '\t'
 
-1062 << (*
+1144 << (*
 ô
 )->
 ≥
@@ -10443,17 +10923,17 @@ node2
 ídl
 ;
 
-1063 ++
+1145 ++
 ô
 ;
 
-1065 
+1147 
 cout
  << "AŒ Symbﬁs:" << 
 ídl
 ;
 
-1066 
+1148 
 ô
  = 
 symbﬁLi°
@@ -10461,7 +10941,7 @@ symbﬁLi°
 	`begö
 ();
 
-1067 
+1149 
 ô
  !
 symbﬁLi°
@@ -10469,7 +10949,7 @@ symbﬁLi°
 	`íd
 ()) {
 
-1068 if((*
+1150 if((*
 ô
 )->
 e
@@ -10479,7 +10959,7 @@ ty≥
 YZ
 ) {
 
-1069 
+1151 
 Symbﬁ
 * 
 tmp
@@ -10487,11 +10967,11 @@ tmp
 ô
 ;
 
-1070 
+1152 
 tmp
 ) {
 
-1071 
+1153 
 cout
  << 
 tmp
@@ -10501,7 +10981,7 @@ tmp
 v
  << '\t'
 
-1072 << 
+1154 << 
 tmp
 ->
 e
@@ -10513,13 +10993,13 @@ node2
 ídl
 ;
 
-1073 
+1155 
 tmp
  =Åmp->
 lum≥dNext
 ;
 
-1076 
+1158 
 cout
  << (*
 ô
@@ -10529,7 +11009,7 @@ cout
 v
  << '\t'
 
-1077 << (*
+1159 << (*
 ô
 )->
 e
@@ -10539,7 +11019,7 @@ node1
 node2
 
 
-1078 << (*
+1160 << (*
 ô
 )->
 ≥
@@ -10551,11 +11031,11 @@ node2
 ídl
 ;
 
-1080 ++
+1162 ++
 ô
 ;
 
-1082 
+1164 
 cout
  << "Thênumbî o‡symbﬁ EFH i†" << 
 maxEFH
@@ -10563,35 +11043,35 @@ maxEFH
 ídl
 ;
 
-1083 
+1165 
 cout
  << "Symbﬁ PröàCom∂ëe." << 
 ídl
 ;
 
-1084 
+1166 
 	}
 }
 
-1086 
+1168 
 	gGPDD
 ::
 	$¥ötInô
 () const {
 
-1087 
+1169 
 cout
  << "Inôü»Sèã Prötög..." << 
 ídl
 ;
 
-1088 
+1170 
 cout
  << "GPDDRoŸ Inf‹m©i⁄:" << 
 ídl
 ;
 
-1089 
+1171 
 cout
  << "Symbﬁ:" << 
 GPDDRoŸ
@@ -10603,13 +11083,13 @@ sym
 ídl
 ;
 
-1090 
+1172 
 cout
  << "Le·Gøph:" << 
 ídl
 ;
 
-1091 
+1173 
 GPDDRoŸ
 ->
 À·G
@@ -10617,13 +11097,13 @@ GPDDRoŸ
 	`¥ötGøph
 ();
 
-1092 
+1174 
 cout
  << "RightGøph:" << 
 ídl
 ;
 
-1093 
+1175 
 GPDDRoŸ
 ->
 rightG
@@ -10631,19 +11111,19 @@ rightG
 	`¥ötGøph
 ();
 
-1094 
+1176 
 gøphHash
 .
 	`Pröt
 ();
 
-1095 
+1177 
 GPDDNodeHash
 .
 	`Pröt
 ();
 
-1096 if(
+1178 if(
 GPDDZîo
  && 
 GPDDO√
@@ -10653,41 +11133,41 @@ cout
 ídl
 ;
 
-1097 
+1179 
 cout
  << "GPDDZîÿ& GPDDO√ d⁄'àhavêmem‹yáŒoˇti⁄." << 
 ídl
 ;
 
-1098 
+1180 
 cout
  << "Inôü»Sèã Prötög Com∂ëe." << 
 ídl
 ;
 
-1099 
+1181 
 	}
 }
 
-1101 
+1183 
 	gGPDD
 ::
 	$A«lysisPröt
 () const {
 
-1102 
+1184 
 cout
  << 
 ídl
  << "GPDD Information:" <<Éndl;
 
-1104 
+1186 
 cout
  << "TimêA«lysis:" << 
 ídl
 ;
 
-1105 
+1187 
 cout
  << "Cúcuô Cœs†tÿGPDD Cœss:\t" << 
 cúTime
@@ -10695,7 +11175,7 @@ cúTime
 ídl
 ;
 
-1106 if(
+1188 if(
 öôed
 Ë
 cout
@@ -10705,7 +11185,7 @@ cout
 ídl
 ;
 
-1107 if(
+1189 if(
 ex∑nded
 Ë
 cout
@@ -10715,7 +11195,7 @@ ex∑ndTime
 ídl
 ;
 
-1108 if(
+1190 if(
 °ïEx∑nd
 Ë
 cout
@@ -10723,7 +11203,7 @@ cout
 ídl
 ;
 
-1109 if(
+1191 if(
 ªdu˚Time
 Ë
 cout
@@ -10731,17 +11211,17 @@ cout
 ídl
 ;
 
-1110 if(
+1192 if(
 ˇÀd
 ) {
 
-1111 
+1193 
 cout
  << 
 ídl
 ;
 
-1112 
+1194 
 cout
  << "AvîagêGPDD CÆcuœti⁄:\t" << 
 ⁄˚AvgCÆTime
@@ -10749,7 +11229,7 @@ cout
 ídl
 ;
 
-1113 
+1195 
 cout
  << "WhﬁêGPDD CÆcuœti⁄: \t" << 
 whﬁeCÆTime
@@ -10757,13 +11237,13 @@ whﬁeCÆTime
 ídl
 ;
 
-1115 
+1197 
 cout
  << 
 ídl
 ;
 
-1116 
+1198 
 cout
  << "ThêTŸÆ TimêCosumög:\t" << 
 tTime
@@ -10771,17 +11251,17 @@ tTime
 ídl
 ;
 
-1118 
+1200 
 cout
  << 
 ídl
  << "Memory Analysis:" <<Éndl;
 
-1119 if(
+1201 if(
 ex∑nded
 ) {
 
-1120 
+1202 
 cout
  << "ThêNumbî o‡Gøph Bef‹êRedu˘i⁄:\t" << 
 gøphNode
@@ -10789,7 +11269,7 @@ gøphNode
 ídl
 ;
 
-1121 
+1203 
 cout
  << "Hô Timêo‡Gøph Bef‹êRedu˘i⁄:\t" << 
 gøphNode
@@ -10797,7 +11277,7 @@ gøphNode
 ídl
 ;
 
-1122 
+1204 
 cout
  << "Cøsh Timêo‡Gøph Bef‹êRedu˘i⁄:\t" << 
 gøphNode
@@ -10805,7 +11285,7 @@ gøphNode
 ídl
 ;
 
-1123 
+1205 
 cout
  << "ThêNumbî o‡GPDDNodêBef‹êRed˘i⁄:\t" << 
 ex∑ndNode
@@ -10813,7 +11293,7 @@ ex∑ndNode
 ídl
 ;
 
-1124 
+1206 
 cout
  << "Hô Timêo‡GPDDNodêBef‹êRedu˘i⁄:\t" << 
 ex∑ndNode
@@ -10821,7 +11301,7 @@ ex∑ndNode
 ídl
 ;
 
-1125 
+1207 
 cout
  << "Cøsh Timêo‡GPDDNodêBef‹êRed˘i⁄:\t" << 
 ex∑ndNode
@@ -10829,17 +11309,17 @@ ex∑ndNode
 ídl
 ;
 
-1127 if(
+1209 if(
 ªdu˚Time
 ) {
 
-1128 
+1210 
 cout
  << 
 ídl
 ;
 
-1129 
+1211 
 cout
  << "ThêNumbî o‡GPDDNodêA·î Redu˘i⁄:\t" << 
 ªdu˚Node
@@ -10847,7 +11327,7 @@ cout
 ídl
 ;
 
-1130 
+1212 
 cout
  << "Hô Timêo‡GPDDNodêA·î Redu˘i⁄:\t" << 
 ªdu˚Node
@@ -10855,7 +11335,7 @@ cout
 ídl
 ;
 
-1131 
+1213 
 cout
  << "Cøsh Timêo‡GPDDNodêA·î Redu˘i⁄:\t" << 
 ªdu˚Node
@@ -10863,17 +11343,17 @@ cout
 ídl
 ;
 
-1134 if(
+1216 if(
 ãrmCou¡ed
 ) {
 
-1135 
+1217 
 cout
  << 
 ídl
  << "Term Analysis:" <<Éndl;
 
-1136 
+1218 
 cout
  << 
 	`£tiosÊags
@@ -10885,7 +11365,7 @@ scõ¡ific
 	`£çªcisi⁄
 (5);
 
-1137 
+1219 
 cout
  << "# o‡ãrm†⁄Çumî©‹:\t" << (
 nTîmNum
@@ -10893,7 +11373,7 @@ nTîmNum
 ídl
 ;
 
-1138 
+1220 
 cout
  << "# o‡ãrm†⁄ díomö©‹:\t" << (
 nTîmDí
@@ -10901,17 +11381,17 @@ nTîmDí
 ídl
 ;
 
-1140 
+1222 
 	}
 }
 
-1142 
+1224 
 	gGPDD
 ::~
 	$GPDD
 () {
 
-1143 
+1225 
 li°
 <
 Symbﬁ
@@ -10925,7 +11405,7 @@ symbﬁLi°
 	`begö
 ();
 
-1144 
+1226 
 ô
  !
 symbﬁLi°
@@ -10933,7 +11413,7 @@ symbﬁLi°
 	`íd
 (); it++) {
 
-1145 
+1227 
 Symbﬁ
  *
 tmp
@@ -10945,41 +11425,41 @@ lum≥dNext
 tmp0
 ;
 
-1146 
+1228 
 tmp
 ) {
 
-1147 
+1229 
 tmp0
  = 
 tmp
 ;
 
-1148 
+1230 
 tmp
  =Åmp->
 lum≥dNext
 ;
 
-1149 
+1231 
 dñëe
  
 tmp0
 ;
 
-1151 
+1233 
 	`dñëe
  (*
 ô
 );
 
-1153 
+1235 
 symbﬁLi°
 .
 	`˛ór
 ();
 
-1154 
+1236 
 li°
 <
 Symbﬁ
@@ -10993,7 +11473,7 @@ nuŒ‹Li°
 	`begö
 ();
 
-1155 
+1237 
 ô
  !
 nuŒ‹Li°
@@ -11003,25 +11483,25 @@ nuŒ‹Li°
 	`dñëe
  (*it);
 
-1156 
+1238 
 nuŒ‹Li°
 .
 	`˛ór
 ();
 
-1158 
+1240 
 dñëe
  
 GPDDZîo
 ;
 
-1159 
+1241 
 dñëe
  
 GPDDO√
 ;
 
-1160 
+1242 
 	}
 }
 
@@ -11357,7 +11837,7 @@ fout
 fûíame
  = "");
 
-91 
+92 
 	`îr‹As£ss
 (c⁄° 
 ve˘‹
@@ -11367,7 +11847,7 @@ ve˘‹
 ã°
 );
 
-92 
+93 
 	`îr‹As£ss
 (c⁄° 
 ve˘‹
@@ -11379,7 +11859,7 @@ ve˘‹
 pos
 );
 
-93 
+94 
 	`îr‹MagPha£
 (
 mag
@@ -11387,7 +11867,7 @@ mag
 pha£
 );
 
-94 
+95 
 	`symbﬁAs£ss
 (
 Symbﬁ
@@ -11395,23 +11875,33 @@ Symbﬁ
 curSym
 );
 
-96 
+96 
+	`t›ﬁogyA«lysis
+(c⁄° 
+ve˘‹
+<
+Symbﬁ
+*> &
+s‹tSymLi°
+);
+
+98 
 ve˘‹
 <> 
 magLi°
 ;
 
-97 
+99 
 ve˘‹
 <> 
 pha£Li°
 ;
 
-99 
+101 
 public
 :
 
-101 
+103 
 	`GPDD
 (c⁄° 
 Ckt
@@ -11419,11 +11909,11 @@ Ckt
 myCkt
 );
 
-104 
+106 
 	`öô
 ();
 
-107 
+109 
 	`ex∑nd
 (
 boﬁ
@@ -11433,39 +11923,39 @@ boﬁ
 Ál£
 );
 
-108 
+110 
 	`ªdu˘i⁄
 ();
 
-111 
+113 
 	`CÆcuœti⁄
 ();
 
-112 
+114 
 	`TîmCou¡
 ();
 
-115 
+117 
 	`A«SC⁄åibuti⁄
 ();
 
-118 
+120 
 	$¥ötSymbﬁ
 () const;
 
-119 
+121 
 	$¥ötInô
 () const;
 
-120 
+122 
 	$¥ötGPDD
 () const;
 
-121 
+123 
 	$A«lysisPröt
 () const;
 
-124 ~
+126 ~
 	`GPDD
 ();
 

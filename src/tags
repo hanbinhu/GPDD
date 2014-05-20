@@ -223,6 +223,8 @@ GPDD::symbolAssess	GPDD.h	/^		void symbolAssess(Symbol* curSym);$/;"	p	class:GPD
 GPDD::symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
 GPDD::tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
 GPDD::termCounted	GPDD.h	/^		bool termCounted;$/;"	m	class:GPDD	access:private
+GPDD::topologyAnalysis	GPDD.cpp	/^void GPDD::topologyAnalysis(const vector<Symbol*> &sortSymList) {$/;"	f	class:GPDD	signature:(const vector<Symbol*> &sortSymList)
+GPDD::topologyAnalysis	GPDD.h	/^		void topologyAnalysis(const vector<Symbol*> &sortSymList);$/;"	p	class:GPDD	access:private	signature:(const vector<Symbol*> &sortSymList)
 GPDD::updateSymbol	GPDD.cpp	/^void GPDD::updateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)
 GPDD::updateSymbol	GPDD.h	/^		void updateSymbol(const double freq);$/;"	p	class:GPDD	access:private	signature:(const double freq)
 GPDD::wholeCalTime	GPDD.h	/^		long wholeCalTime;$/;"	m	class:GPDD	access:private
@@ -666,6 +668,8 @@ symbolList	GPDD.h	/^		list<Symbol*> symbolList;$/;"	m	class:GPDD	access:private
 tTime	GPDD.h	/^		long tTime;$/;"	m	class:GPDD	access:private
 termCounted	GPDD.h	/^		bool termCounted;$/;"	m	class:GPDD	access:private
 termNum	GPDDNode.h	/^	long long termNum;$/;"	m	struct:GPDDNode	access:public
+topologyAnalysis	GPDD.cpp	/^void GPDD::topologyAnalysis(const vector<Symbol*> &sortSymList) {$/;"	f	class:GPDD	signature:(const vector<Symbol*> &sortSymList)
+topologyAnalysis	GPDD.h	/^		void topologyAnalysis(const vector<Symbol*> &sortSymList);$/;"	p	class:GPDD	access:private	signature:(const vector<Symbol*> &sortSymList)
 type	Ckt.h	/^	int type;$/;"	m	struct:cktEdge	access:public
 type	GPDD_struct.h	/^	int type;$/;"	m	struct:Edge	access:public
 updateSymbol	GPDD.cpp	/^void GPDD::updateSymbol(const double freq) {$/;"	f	class:GPDD	signature:(const double freq)

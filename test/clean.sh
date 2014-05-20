@@ -1,8 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 cleanpath=$(cd "$(dirname "$0")"; pwd)
-cd $cleanpath/basic
-rm -rf *.out
-cd $cleanpath/RCtest
-rm -rf *.out
-cd $cleanpath/two_stage
-rm -rf *.out*
+find $cleanpath/basic -name "*.out*" | xargs rm -vf
+find $cleanpath/RCtest -name "*.out*" | xargs rm -vf
+find $cleanpath/two_stage -name "*.out*" | xargs rm -vf
+find $cleanpath/two_stage_vbias -name "*.out*" | xargs rm -vf

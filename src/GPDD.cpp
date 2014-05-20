@@ -1093,6 +1093,8 @@ void GPDD::topologyAnalysis(const vector<Symbol*> &sortSymList) {
 	vector<Graph*> simpGraphList;
 	simpGraphList.push_back(tmpG);
 
+	cout << "Original Graph Generated." << endl;
+
 	//Simplification
 	it = sortSymList.begin(); Graph* preG = tmpG;
 	while(it != sortSymList.end()) {
@@ -1125,11 +1127,13 @@ void GPDD::topologyAnalysis(const vector<Symbol*> &sortSymList) {
 			cout << "Didn't Consider Now." << endl;
 			break;
 		}
-
 		it++;
 	}
 
+	cout << "Graph List Generated." << endl;
+
 	int showNum;
+	cout << "Input Del Num:";
 	cin >> showNum;
 	simpGraphList[showNum]->printGraph();
 }
