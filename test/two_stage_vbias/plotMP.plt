@@ -24,7 +24,7 @@ set key box left bottom
 
 
 datafile="two_stage.out_"
-numset="0 100"
+numset="0 54"
 
 plot for [i in numset] \
 	datafile.i u 1:2 t "Mag_{".i."}" w lp lw 2 pt 1 axis x1y1, \

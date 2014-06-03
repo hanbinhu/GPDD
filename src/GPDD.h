@@ -97,6 +97,7 @@ class GPDD {
 
 		vector<double> magList;
 		vector<double> phaseList;
+		int GBW;
 
 	public:
 		//construction

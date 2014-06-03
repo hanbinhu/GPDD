@@ -138,6 +138,7 @@ EvaluatePC	GPDD.h	/^		complex<double> EvaluatePC(const GPDDNode* p, const GPDDNo
 Exclude	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Exclude(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
 Exclude	GPDD.h	/^		pair<GPDDNode*, bool> Exclude(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
 FLEXSPAWN	Makefile	/^FLEXSPAWN = SpScanner.cpp$/;"	m
+GBW	GPDD.h	/^		int GBW;$/;"	m	class:GPDD	access:private
 GPDD	GPDD.cpp	/^GPDD::GPDD(const Ckt* myCkt) {$/;"	f	class:GPDD	signature:(const Ckt* myCkt)
 GPDD	GPDD.h	/^		GPDD(const Ckt* myCkt);$/;"	p	class:GPDD	access:public	signature:(const Ckt* myCkt)
 GPDD	GPDD.h	/^class GPDD {$/;"	c
@@ -153,6 +154,7 @@ GPDD::EvaluatePC	GPDD.cpp	/^complex<double> GPDD::EvaluatePC(const GPDDNode* p, 
 GPDD::EvaluatePC	GPDD.h	/^		complex<double> EvaluatePC(const GPDDNode* p, const GPDDNode* c) const;$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* p, const GPDDNode* c) const
 GPDD::Exclude	GPDD.cpp	/^pair<GPDDNode*, bool> GPDD::Exclude(const GPDDNode* fNode) {$/;"	f	class:GPDD	signature:(const GPDDNode* fNode)
 GPDD::Exclude	GPDD.h	/^		pair<GPDDNode*, bool> Exclude(const GPDDNode* fNode);$/;"	p	class:GPDD	access:private	signature:(const GPDDNode* fNode)
+GPDD::GBW	GPDD.h	/^		int GBW;$/;"	m	class:GPDD	access:private
 GPDD::GPDD	GPDD.cpp	/^GPDD::GPDD(const Ckt* myCkt) {$/;"	f	class:GPDD	signature:(const Ckt* myCkt)
 GPDD::GPDD	GPDD.h	/^		GPDD(const Ckt* myCkt);$/;"	p	class:GPDD	access:public	signature:(const Ckt* myCkt)
 GPDD::GPDDNodeHash	GPDD.h	/^		HashGPDDNode GPDDNodeHash;$/;"	m	class:GPDD	access:private

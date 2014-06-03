@@ -617,6 +617,12 @@ void GPDD::Calculation() {
 	tTime += CalTime;
 
 	cout << "All Result are written into " << outFile <<"." << endl;
+
+	int i = 1; GBW = 0;
+	while(i < magList.size()) {
+		if (abs(magList[GBW] - 1) > abs(magList[i] - 1)) GBW = i;
+		i++;
+	}
 }
 
 void GPDD::updateSymbol(const double freq) {
@@ -872,8 +878,12 @@ pair<double, double> GPDD::delCalculation(bool fout, const string& filename) {
 		}
 		out.close();
 	}
-	double magError = errorAssess(magList, magTest, 40);
-	double phaseError = errorAssess(phaseList, phaseTest, 40);
+	//Pole
+	/* double magError = errorAssess(magList, magTest, 40); */
+	/* double phaseError = errorAssess(phaseList, phaseTest, 40); */
+	//Gain PM
+	double magError = errorAssess(magList, magTest, 1);
+	double phaseError = errorAssess(phaseList, phaseTest, GBW);
 	return pair<double, double>(magError, phaseError);
 }
 
@@ -1016,7 +1026,7 @@ void GPDD::AnaSContribution() {
 
 	//Evaluate Deletion Effect
 	vector<Symbol*> sortedSymList;
-	int step = 3; int nStart = 0; bool f = true;
+	int step = 1; int nStart = 0; bool f = true;
 	for(int n = 0; n <= nElement; n += step) {
 		for(int i = nStart; i < n; i++) {
 			it = symbolList.begin(); it++;
