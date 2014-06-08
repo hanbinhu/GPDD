@@ -1,0 +1,427 @@
+ ****** HSPICE -- A-2008.03 64-BIT (Feb 26 2008) linux ******                   
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    /license.warn
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: PMOS_CS_low_gain_1st_20dB.sp                                      
+ lic: No 'setenv LM_LICENSE_FILE' in current environment' 
+ lic:  
+ lic: FLEXlm: v8.5b 
+ lic: USER:   linyibo              HOSTNAME: eda-server.localdomain 
+ lic: HOSTID: 002219a9250f         PID:      30998 
+ lic: Using FLEXlm license file: 
+ lic: /usr/local/flexlm/licenses/license.dat 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 31-dec-2020/2007.9 
+ lic: NODE LOCKED license on hostid 002219a9250f 
+ lic:   
+
+ vdd vdd 0 dc 1.8 ac 0 
+ vcm vcm 0 dc 0.7 ac 0
+ vin1 in1 vcm ac 1
+ vin2 in2 vcm ac 0
+ ibias iin 0 dc 10u
+
+ **amplifier
+ **first stage
+ m1 y in1 tail vdd pch l=0.5u w=6u
+ m2 x in2 tail vdd pch l=0.5u w=6u
+ m3 y x 0 0 nch l=0.5u w=5u
+ m4 x x 0 0 nch l=0.5u w=5u
+ m5 tail iin vdd vdd pch l=0.5u w=48u
+
+ **second stage
+ m6 out y 0 0 nch l=0.5u w=30u
+ m7 out iin vdd vdd pch l=0.5u w=144u
+
+ **bias
+ m8 iin iin vdd vdd pch l=0.5u w=3u
+
+ **compensation
+ rz y z 1.75k
+ cc z out 350f
+
+ **load
+ cl out 0 2p
+
+ .options list post=2
+
+ .op
+ .ac dec 10 1 1g
+ .print ac vm(out) vp(out)
+
+ .end
+ scientific notation:
+ a=10**-18  f=10**-15  p=10**-12  n=10**-9  u=10**-6
+ m=10**-3   k=10**3    x=10**6    g=10**9 
+
+
+ circuit parameter definitions
+  parameter          =  value 
+
+
+
+
+
+ constants  - tnom         kt           vt           gapsi        ni
+            298.1500     4.116e-21     25.6918m      1.1156     1.256e+16  
+ 
+
+1****** HSPICE -- A-2008.03 64-BIT (Feb 26 2008) linux ******                   
+ ******  
+ **pmos input stage cs output stage amplifier                                   
+  ******  circuit element summary          tnom=  25.000 temp=  25.000          
+ ******  
+
+
+ **** resistors
+
+  
+ 
+                             
+ element name        0:rz    
+ node1               0:y     
+ node2               0:z     
+ model                       
+ res eff             1.7500k 
+ tc1                 0.      
+ tc2                 0.      
+ scale               1.0000  
+ m                   1.0000  
+ ac                  1.7500k 
+ temp               25.0000  
+ l                   0.      
+ w                   0.      
+ cap                 0.      
+ noise               1.0000  
+
+
+ **** capacitors
+  
+ 
+                                        
+ element name        0:cc       0:cl    
+ node1               0:z        0:out   
+ node2               0:out      0:0     
+ model                                  
+ cap eff           350.0000f    2.0000p 
+ tc1                 0.         0.      
+ tc2                 0.         0.      
+ scale               1.0000     1.0000  
+ ic                  0.         0.      
+ m                   1.0000     1.0000  
+ w                   0.         0.      
+ l                   0.         0.      
+ temp               25.0000    25.0000  
+
+
+ **** independent sources
+
+     name         node1        node2      dc volt    ac mag    ac phase    type
+        0:vdd       0:vdd                    0:0                   1.8000     0.         0.      dc   
+        0:vcm       0:vcm                    0:0                 700.0000m    0.         0.      dc   
+        0:vin1       0:in1                    0:vcm                 0.         1.0000     0.      dc   
+        0:vin2       0:in2                    0:vcm                 0.         0.         0.      dc   
+        0:ibias       0:iin                    0:0                  10.0000u    0.         0.      dc   
+
+
+ **** mosfets
+
+
+ **** BSIM3v3 Model (Level49 or Level53)
+  
+ 
+                                                              
+ element name        0:m1       0:m2       0:m3       0:m4    
+ drain               0:y        0:x        0:y        0:x     
+ gate                0:in1      0:in2      0:x        0:x     
+ source              0:tail     0:tail     0:0        0:0     
+ bulk                0:vdd      0:vdd      0:0        0:0     
+ model               0:pch.7    0:pch.7    0:nch.7    0:nch.7 
+ w eff               5.9900u    5.9900u    4.9940u    4.9940u 
+ l eff             450.0000n  450.0000n  460.0000n  460.0000n 
+ rd eff            240.0000m  240.0000m  272.0000m  272.0000m 
+ rs eff            240.0000m  240.0000m  272.0000m  272.0000m 
+ cdsat              15.9600a   15.9600a   16.3600a   16.3600a 
+ cssat              15.9600a   15.9600a   16.3600a   16.3600a 
+ capbd               6.9101f    6.9101f    4.8543f    4.8543f 
+ capbs               6.9101f    6.9101f    4.8543f    4.8543f 
+ temp               25.0000    25.0000    25.0000    25.0000  
+ aic                                                          
+ nf                  1.0000     1.0000     1.0000     1.0000  
+ sa                  0.         0.         0.         0.      
+ sb                  0.         0.         0.         0.      
+ sd                  0.         0.         0.         0.      
+ saeff               0.         0.         0.         0.      
+ sbeff               0.         0.         0.         0.      
+ mulu0               1.0000     1.0000     1.0000     1.0000  
+ mulua               1.0000     1.0000     1.0000     1.0000  
+ mulub               1.0000     1.0000     1.0000     1.0000  
+  
+ 
+                                                              
+ element name        0:m5       0:m6       0:m7       0:m8    
+ drain               0:tail     0:out      0:out      0:iin   
+ gate                0:iin      0:y        0:iin      0:iin   
+ source              0:vdd      0:0        0:vdd      0:vdd   
+ bulk                0:vdd      0:0        0:vdd      0:vdd   
+ model               0:pch.3    0:nch.3    0:pch.3    0:pch.7 
+ w eff              47.9900u   29.9940u  143.9900u    2.9900u 
+ l eff             450.0000n  460.0000n  450.0000n  450.0000n 
+ rd eff             30.0000m   45.3333m   10.0000m  480.0000m 
+ rs eff             30.0000m   45.3333m   10.0000m  480.0000m 
+ cdsat             120.9600a   92.3600a  360.9600a    8.4600a 
+ cssat             120.9600a   92.3600a  360.9600a    8.4600a 
+ capbd              53.8913f   28.3097f  161.2769f    3.5543f 
+ capbs              53.8913f   28.3097f  161.2769f    3.5543f 
+ temp               25.0000    25.0000    25.0000    25.0000  
+ aic                                                          
+ nf                  1.0000     1.0000     1.0000     1.0000  
+ sa                  0.         0.         0.         0.      
+ sb                  0.         0.         0.         0.      
+ sd                  0.         0.         0.         0.      
+ saeff               0.         0.         0.         0.      
+ sbeff               0.         0.         0.         0.      
+ mulu0               1.0000     1.0000     1.0000     1.0000  
+ mulua               1.0000     1.0000     1.0000     1.0000  
+ mulub               1.0000     1.0000     1.0000     1.0000  
+  
+ 
+      
+1****** HSPICE -- A-2008.03 64-BIT (Feb 26 2008) linux ******                   
+ ******  
+ **pmos input stage cs output stage amplifier                                   
+  ******  operating point information      tnom=  25.000 temp=  25.000          
+ ******  
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:iin     =   1.1192  0:in1     = 700.0000m 0:in2     = 700.0000m
+ +0:out     =   1.6053  0:tail    =   1.6431  0:vcm     = 700.0000m
+ +0:vdd     =   1.8000  0:x       = 656.1414m 0:y       = 656.1414m
+ +0:z       = 656.1414m
+
+
+ ****  voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vcm      0:vin1     0:vin2    
+  volts      1.8000   700.0000m    0.         0.     
+  current -584.8123u    0.         0.         0.     
+  power      1.0527m    0.         0.         0.     
+
+     total voltage source power dissipation=    1.0527m       watts
+
+
+
+ ***** current sources
+
+ subckt             
+ element  0:ibias   
+  volts      1.1192 
+  current   10.0000u
+  power    -11.1917u
+
+
+     total current source power dissipation= -11.1917u       watts
+
+ **** resistors
+
+ subckt             
+ element  0:rz      
+  r value    1.7500k
+  v drop     0.     
+  current    0.     
+  power      0.     
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:m1       0:m2       0:m3       0:m4       0:m5       0:m6      
+ model    0:pch.7    0:pch.7    0:nch.7    0:nch.7    0:pch.3    0:nch.3   
+ region     Saturati   Saturati   Saturati   Saturati     Linear   Saturati
+  id       -67.9611u  -67.9611u   67.9611u   67.9611u -135.9223u  438.8040u
+  ibs       15.9245a   15.9245a -1.177e-20 -1.177e-20  1.920e-20 -7.148e-20
+  ibd       16.4638a   16.4638a -668.4667a -668.4667a  120.7233a  -85.9941n
+  vgs     -943.0985m -943.0985m  656.1414m  656.1414m -680.8279m  656.1414m
+  vds     -986.9570m -986.9570m  656.1414m  656.1414m -156.9015m    1.6053 
+  vbs      156.9015m  156.9015m    0.         0.         0.         0.     
+  vth     -515.3256m -515.3256m  488.7202m  488.7202m -466.5675m  487.4192m
+  vdsat   -363.2390m -363.2390m  173.4523m  173.4523m -203.2866m  174.2722m
+  vod     -427.7728m -427.7728m  167.4212m  167.4212m -214.2604m  168.7222m
+  beta     802.9987u  802.9987u    4.3111m    4.3111m    6.9521m   26.2498m
+  gam eff  528.9701m  528.9701m  512.7157m  512.7157m  523.6661m  499.9790m
+  gm       276.1016u  276.1016u  624.7719u  624.7719u  898.4370u    3.9580m
+  gds        4.2067u    4.2067u    5.3450u    5.3450u  365.2010u   19.1095u
+  gmb       88.4669u   88.4669u  173.3665u  173.3665u  303.8118u    1.0917m
+  cdtot      6.9553f    6.9553f    5.6932f    5.6932f   87.8502f   29.6306f
+  cgtot     22.8660f   22.8660f   18.0945f   18.0945f  183.6954f  108.4061f
+  cstot     28.6807f   28.6807f   22.1679f   22.1679f  228.6396f  132.1812f
+  cbtot     16.7339f   16.7339f   13.2475f   13.2475f  152.0160f   73.7342f
+  cgs       20.2926f   20.2926f   15.1292f   15.1292f  154.1734f   90.9642f
+  cgd        1.9657f    1.9657f    1.8318f    1.8318f   23.9742f   10.9759f
+
+
+
+ subckt                        
+ element  0:m7       0:m8      
+ model    0:pch.3    0:pch.7   
+ region       Linear   Saturati
+  id      -438.8900u  -10.0000u
+  ibs      6.166e-20  1.580e-21
+  ibd      360.9601a    8.5166a
+  vgs     -680.8279m -680.8279m
+  vds     -194.6681m -680.8279m
+  vbs        0.         0.     
+  vth     -466.5563m -464.8536m
+  vdsat   -203.2945m -204.7040m
+  vod     -214.2717m -215.9744m
+  beta      20.8591m  417.6198u
+  gam eff  523.6661m  554.9244m
+  gm         3.1488m   78.2244u
+  gds      585.6600u  895.9591n
+  gmb        1.0539m   26.1677u
+  cdtot    227.6849f    3.8255f
+  cgtot    542.9598f   11.1466f
+  cstot    683.7295f   14.4653f
+  cbtot    451.1480f    9.3952f
+  cgs      464.8057f    9.6144f
+  cgd       59.1498f  981.9411a
+
+
+
+ ******  
+ **pmos input stage cs output stage amplifier                                   
+  ******  ac analysis                      tnom=  25.000 temp=  25.000          
+ ******  
+x
+
+        freq    voltage m    volt phase 
+                    out          out    
+    1.00000     188.4739    -109.1840u  
+    1.25893     188.4739    -137.4545u  
+    1.58489     188.4739    -173.0450u  
+    1.99526     188.4739    -217.8507u  
+    2.51189     188.4739    -274.2578u  
+    3.16228     188.4739    -345.2701u  
+    3.98107     188.4739    -434.6693u  
+    5.01187     188.4739    -547.2163u  
+    6.30957     188.4739    -688.9045u  
+    7.94328     188.4739    -867.2793u  
+   10.00000     188.4739      -1.0918m  
+   12.58925     188.4739      -1.3745m  
+   15.84893     188.4739      -1.7304m  
+   19.95262     188.4739      -2.1785m  
+   25.11886     188.4739      -2.7426m  
+   31.62278     188.4739      -3.4527m  
+   39.81072     188.4739      -4.3467m  
+   50.11872     188.4739      -5.4722m  
+   63.09573     188.4739      -6.8890m  
+   79.43282     188.4739      -8.6728m  
+  100.00000     188.4739     -10.9184m  
+  125.89254     188.4739     -13.7455m  
+  158.48932     188.4739     -17.3045m  
+  199.52623     188.4739     -21.7851m  
+  251.18864     188.4739     -27.4258m  
+  316.22777     188.4739     -34.5270m  
+  398.10717     188.4739     -43.4669m  
+  501.18723     188.4738     -54.7216m  
+  630.95734     188.4738     -68.8904m  
+  794.32823     188.4737     -86.7279m  
+    1.00000k    188.4736    -109.1839m  
+    1.25893k    188.4734    -137.4543m  
+    1.58489k    188.4731    -173.0445m  
+    1.99526k    188.4726    -217.8497m  
+    2.51189k    188.4718    -274.2557m  
+    3.16228k    188.4705    -345.2660m  
+    3.98107k    188.4685    -434.6611m  
+    5.01187k    188.4654    -547.1998m  
+    6.30957k    188.4604    -688.8715m  
+    7.94328k    188.4524    -867.2137m  
+   10.00000k    188.4399      -1.0917   
+   12.58925k    188.4200      -1.3743   
+   15.84893k    188.3884      -1.7299   
+   19.95262k    188.3385      -2.1775   
+   25.11886k    188.2594      -2.7405   
+   31.62278k    188.1343      -3.4486   
+   39.81072k    187.9365      -4.3384   
+   50.11872k    187.6243      -5.4557   
+   63.09573k    187.1327      -6.8564   
+   79.43282k    186.3614      -8.6079   
+  100.00000k    185.1582     -10.7900   
+  125.89254k    183.2981     -13.4924   
+  158.48932k    180.4616     -16.8090   
+  199.52623k    176.2238     -20.8248   
+  251.18864k    170.0791     -25.5919   
+  316.22777k    161.5335     -31.0967   
+  398.10717k    150.2869     -37.2254   
+  501.18723k    136.4539     -43.7492   
+  630.95734k    120.6865     -50.3523   
+  794.32823k    104.0567     -56.7015   
+    1.00000x     87.7313     -62.5261   
+    1.25893x     72.6443     -67.6655   
+    1.58489x     59.3421     -72.0700   
+    1.99526x     48.0088     -75.7719   
+    2.51189x     38.5804     -78.8498   
+    3.16228x     30.8610     -81.4000   
+    3.98107x     24.6062     -83.5189   
+    5.01187x     19.5713     -85.2924   
+    6.30957x     15.5355     -86.7902   
+    7.94328x     12.3095     -88.0633   
+   10.00000x      9.7373     -89.1431   
+   12.58925x      7.6918     -90.0465   
+   15.84893x      6.0707     -90.7868   
+   19.95262x      4.7906     -91.3887   
+   25.11886x      3.7827     -91.8962   
+   31.62278x      2.9901     -92.3692   
+   39.81072x      2.3665     -92.8740   
+   50.11872x      1.8753     -93.4748   
+   63.09573x      1.4875     -94.2339   
+   79.43282x      1.1810     -95.2169   
+  100.00000x    938.2490m    -96.5019   
+  125.89254x    745.6912m    -98.1891   
+  158.48932x    592.5110m   -100.4108   
+  199.52623x    470.0423m   -103.3332   
+  251.18864x    371.3001m   -107.1432   
+  316.22777x    290.7654m   -112.0068   
+  398.10717x    224.3507m   -118.0045   
+  501.18723x    169.3736m   -125.0680   
+  630.95734x    124.3268m   -132.9523   
+  794.32823x     88.3906m   -141.2653   
+    1.00000g     60.8570m   -149.5542   
+y
+
+          ***** job concluded
+1****** HSPICE -- A-2008.03 64-BIT (Feb 26 2008) linux ******                   
+ ******  
+ **pmos input stage cs output stage amplifier                                   
+  ******  job statistics summary           tnom=  25.000 temp=  25.000          
+ ******  
+
+           total memory used             208 kbytes
+
+  # nodes =      27 # elements=      16
+  # diodes=       0 # bjts    =       0 # jfets   =       0 # mosfets =       8
+  # va device =       0
+
+    analysis           time    # points   tot. iter  conv.iter
+
+    op point           0.00           1          16
+    ac analysis        0.00          91          91
+    readin             0.08
+    errchk             0.01
+    setup              0.00
+    output             0.00
+           total cpu time          0.09 seconds
+           total elapsed time         1 seconds
+               job started at  14:51:55 06/08/2014
+               job ended   at  14:51:56 06/08/2014
+
+
+ lic: Release hspice token(s) 

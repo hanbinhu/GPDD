@@ -1,0 +1,133 @@
+**PMOS input stage CS output stage amplifier
+
+vin1 in1 0 1
+
+**amplifier
+**first stage
+
+*M1 y in1 tail 0 
+RdM1	node1M1	y	240.0000m
+RsM1	node2M1	tail	240.0000m
+CbdM1	node1M1	0	6.9101f
+CbsM1	node2M1	0	6.9101f
+RbdM1	node1M1	0	6.94771863117871e+16
+RbsM1	node2M1	0	9.85283682376213e+15
+GmM1	node1M1	node2M1	in1	tail	276.1016u
+RdsM1	node1M1	node2M1	237716.024437207
+GmbM1	node1M1	node2M1	0	tail	88.4669u
+CgsM1	node2M1	in1	20.2926f
+CgdM1	node1M1	in1	1.9657f
+
+
+*M2 x 0 tail 0 
+RdM2	node1M2	x	240.0000m
+RsM2	node2M2	tail	240.0000m
+CbdM2	node1M2	0	6.9101f
+CbsM2	node2M2	0	6.9101f
+RbdM2	node1M2	0	6.94771863117871e+16
+RbsM2	node2M2	0	9.85283682376213e+15
+GmM2	node1M2	node2M2	0	tail	276.1016u
+RdsM2	node1M2	node2M2	237716.024437207
+GmbM2	node1M2	node2M2	0	tail	88.4669u
+CgsM2	node2M2	0	20.2926f
+CgdM2	node1M2	0	1.9657f
+
+
+*M3 y X 0 0 
+RdM3	node1M3	y	272.0000m
+RsM3	node2M3	0	272.0000m
+CbdM3	node1M3	0	4.8543f
+CbsM3	node2M3	0	4.8543f
+RbdM3	node1M3	0	981561833970189
+RbsM3	node2M3	0	0.1f
+GmM3	node1M3	node2M3	X	0	624.7719u
+RdsM3	node1M3	node2M3	187090.739008419
+GmbM3	node1M3	node2M3	0	0	173.3665u
+CgsM3	node2M3	X	15.1292f
+CgdM3	node1M3	X	1.8318f
+
+
+*M4 x x 0 0 
+RdM4	node1M4	x	272.0000m
+RsM4	node2M4	0	272.0000m
+CbdM4	node1M4	0	4.8543f
+CbsM4	node2M4	0	4.8543f
+RbdM4	node1M4	0	981561833970189
+RbsM4	node2M4	0	0.1f
+GmM4	node1M4	node2M4	x	0	624.7719u
+RdsM4	node1M4	node2M4	187090.739008419
+GmbM4	node1M4	node2M4	0	0	173.3665u
+CgsM4	node2M4	x	15.1292f
+CgdM4	node1M4	x	1.8318f
+
+
+*M5 tail Iin 0 0 
+RdM5	node1M5	tail	30.0000m
+RsM5	node2M5	0	30.0000m
+CbdM5	node1M5	0	53.8913f
+CbsM5	node2M5	0	53.8913f
+RbdM5	node1M5	0	1.29967868671582e+15
+RbsM5	node2M5	0	0.1f
+GmM5	node1M5	node2M5	Iin	0	898.4370u
+RdsM5	node1M5	node2M5	2738.21813193283
+GmbM5	node1M5	node2M5	0	0	303.8118u
+CgsM5	node2M5	Iin	154.1734f
+CgdM5	node1M5	Iin	23.9742f
+
+
+**second stage
+
+*M6 out y 0 0 
+RdM6	node1M6	out	45.3333m
+RsM6	node2M6	0	45.3333m
+CbdM6	node1M6	0	28.3097f
+CbsM6	node2M6	0	28.3097f
+RbdM6	node1M6	0	18667559.7511922
+RbsM6	node2M6	0	0.1f
+GmM6	node1M6	node2M6	y	0	3.9580m
+RdsM6	node1M6	node2M6	52329.992935451
+GmbM6	node1M6	node2M6	0	0	1.0917m
+CgsM6	node2M6	y	90.9642f
+CgdM6	node1M6	y	10.9759f
+
+
+*M7 out Iin 0 0 
+RdM7	node1M7	out	10.0000m
+RsM7	node2M7	0	10.0000m
+CbdM7	node1M7	0	161.2769f
+CbsM7	node2M7	0	161.2769f
+RbdM7	node1M7	0	539306421956333
+RbsM7	node2M7	0	0.1f
+GmM7	node1M7	node2M7	Iin	0	3.1488m
+RdsM7	node1M7	node2M7	1707.47532698153
+GmbM7	node1M7	node2M7	0	0	1.0539m
+CgsM7	node2M7	Iin	464.8057f
+CgdM7	node1M7	Iin	59.1498f
+
+
+**bias
+
+*M8 Iin Iin 0 0 
+RdM8	node1M8	Iin	480.0000m
+RsM8	node2M8	0	480.0000m
+CbdM8	node1M8	0	3.5543f
+CbsM8	node2M8	0	3.5543f
+RbdM8	node1M8	0	7.99412793837917e+16
+RbsM8	node2M8	0	0.1f
+GmM8	node1M8	node2M8	Iin	0	78.2244u
+RdsM8	node1M8	node2M8	1116122.37656831
+GmbM8	node1M8	node2M8	0	0	26.1677u
+CgsM8	node2M8	Iin	9.6144f
+CgdM8	node1M8	Iin	981.9411a
+
+
+**compensation
+Rz y z 1.75k
+Cc z out 350f
+
+**Load
+Cl out 0 2p
+
+.ac out 0 dec 10 10 10G
+
+.end
